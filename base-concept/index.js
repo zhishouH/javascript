@@ -28,9 +28,9 @@ console.log(typeof null) // object
 console.log('')
 
 // //Undefined类型
-var theWord
-console.log(theWord == undefined) // true
-console.log('')
+// var theWord
+// console.log(theWord == undefined) // true
+// console.log('')
 
 // //Null类型
 var car = null
@@ -48,13 +48,13 @@ console.log('')
 
 // Number类型
 // 八进制
-var intNum1 = 070 // 八进制的56
-var intNum2 = 079  //无效的八进制数值-解析为79
-var intNum3 = 08  // 无效的八进制数值-解析为8
-console.log(intNum1)
-console.log(intNum2)
-console.log(intNum3)
-console.log('')
+// var intNum1 = 070 // 八进制的56
+// var intNum2 = 079  //无效的八进制数值-解析为79
+// var intNum3 = 08  // 无效的八进制数值-解析为8
+// console.log(intNum1)
+// console.log(intNum2)
+// console.log(intNum3)
+// console.log('')
 
 // 十六进制
 var hexNum1 = 0xA // 十六进制的10
@@ -64,9 +64,9 @@ console.log(hexNum2)
 console.log('')
 
 // 浮点数值
-var floatNum1 = 1.1  // 1.1
-var floatNum2 = 0.1  // 0.1
-var floatNum3 = .1  // 0.1
+var floatNum1 = 1.1 // 1.1
+var floatNum2 = 0.1 // 0.1
+var floatNum3 = 0.1 // 0.1
 console.log(floatNum1)
 console.log(floatNum2)
 console.log(floatNum3)
@@ -91,7 +91,7 @@ console.log(isFinite(result)) // false-超出范围，isFinite()函数判断是�
 console.log('')
 
 // NaN-非数值(Not a Number)
-console.log(NaN == NaN)
+// console.log(NaN == NaN)
 console.log('')
 // isNaN()函数
 console.log(isNaN(NaN)) // true
@@ -193,3 +193,63 @@ console.log(String(values3)) // null
 console.log(String(values4))// undefined
 console.log('')
 
+// 逻辑非
+console.log(!false) // true
+console.log(!'blue') // false
+console.log(!0) // true
+console.log(!NaN) // true
+console.log(!'') // true
+console.log(!12345) // false
+console.log('')
+
+// 逻辑与
+// var demo = false
+// var result1 = (demo && someUndefinedVariable)
+// console.log(result1)
+
+// 逻辑或
+var result2 = true || false
+console.log(result2)
+console.log('')
+
+// 乘法
+var result3 = 34 * 56
+console.log(result3)
+console.log('')
+
+// 加法
+var result5 = 5 + 5
+console.log(result5)
+var result6 = 5 + '5'
+console.log(result6)
+console.log('')
+
+// 减法
+var diff1 = 5 - true // 4,true转换为1
+var diff2 = NaN - 1 // NaN
+var diff3 = 5 - 3 // 2
+var diff4 = 5 - '' // 5，''转换为0
+var diff5 = 5 - '2' // 3，'2'转换为2
+var diff6 = 5 - null // 5，null转换为0
+console.log(diff1)
+console.log(diff2)
+console.log(diff3)
+console.log(diff4)
+console.log(diff5)
+console.log(diff6)
+console.log('')
+
+// 关系操作符
+var result7 = 'Brick' < 'alphabet'
+console.log("'Brick' < 'alphabet' = " + result7) // true
+var result8 = 'Brick'.toLowerCase() < 'alphabet'.toLowerCase()
+console.log("'Brick'.toLowerCase() < 'alphabet'.toLowerCase() = " + result8)// false
+var result9 = '23' < 3
+console.log("'23' < 3 = " + result9) // false
+var result10 = '23' < '3'
+console.log("'23' < '3' = " + result10) // true
+var result11 = 'a' < 3
+console.log("'a' < 3 = " + result11) // false
+// 任何操作数与NaN进行关系比较，结果都是false
+// var result12 = NaN < 3
+// console.log('NaN < 3 = ' + result12)
