@@ -253,3 +253,160 @@ console.log("'a' < 3 = " + result11) // false
 // 任何操作数与NaN进行关系比较，结果都是false
 // var result12 = NaN < 3
 // console.log('NaN < 3 = ' + result12)
+
+// 相等操作符
+var result13 = ('55' === 55)
+console.log(" ('55' === 55) = " + result13) // false
+var result14 = ('55' !== 55)
+console.log("('55' !== 55) = " + result14) // true
+
+// 条件操作符
+var newNum = 10
+var newNew2 = 5
+var max = (newNum > newNew2) ? newNum : newNew2
+console.log(max)
+
+// if语句
+// var i = 30
+// 单分支
+// if (i < 100) {
+//   alert('Less than or equal to 100.')
+// }
+// // 双分支
+// if (i > 25) {
+//   alert('Greater than 25.')
+// } else {
+//   alert('Less than or equal to 25.')
+// }
+// // 多分支
+// if (i > 25) {
+//   alert('Greater than 25.')
+// } else if (i < 0) {
+//   alert('Less than 0')
+// } else {
+//   alert('Between 0 and 25,inclusive')
+// }
+
+// // do-while语句
+// var j = 0
+// do {
+//   j += 2
+//   alert(j)
+// } while (j < 10)
+
+// // while语句
+// var k = 0
+// while (k < 10) {
+//   k += 2
+//   alert(k)
+// }
+
+// // for语句
+// var count = 10
+// for (var a = 0; a < count; a++) {
+//   alert(a)
+// }
+
+// for-in语句
+// for (var propName in window) {
+//   document.write(propName)
+// }
+
+// label语句
+// start: for (var i = 0; i < count; i++) {
+//   alert(i)
+// }
+
+// break语句
+// var a = 0
+// for (var i = 1; i < 10; i++) {
+//   if (i % 5 == 0) {
+//     break
+//   }
+//   a++
+// }
+// alert(a)
+
+// continue语句
+// var a = 0
+// for (var i = 1; i < 10; i++) {
+//   if (i % 5 == 0) {
+//     continue
+//   }
+//   a++
+// }
+// console.log(a)
+
+// break与label联合使用
+// var a = 0
+// outermost:
+// for (var i = 0; i < 10; i++) {
+//   for (var j = 0; j < 10; j++) {
+//     if (i == 5 && j == 5) {
+//       break outermost
+//     }
+//     a++
+//   }
+// }
+// console.log(a)
+
+// continue与label联合使用
+// var a = 0
+// outermost:
+// for (var i = 0; i < 10; i++) {
+//   for (var j = 0; j < 10; j++) {
+//     if (i == 5 && j == 5) {
+//       continue outermost
+//     }
+//     a++
+//   }
+// }
+// console.log(a)
+
+// with语句
+// var qs = location.search.substring(1)
+// var hostName = location.hostname
+// var url = location.href
+
+// with(location) {
+//   var qs = search.substring(1)
+//   var hostName = hostname
+//   var url = href
+// }
+
+// switch语句
+// var a = 10
+// switch (a) {
+//   case 5:
+//     console.log('5')
+//     break
+//   case 10:
+//     console.log('10')
+//     break
+//   case 15:
+//     console.log('15')
+//     break
+//   default:
+//     console('>15')
+// }
+
+// 函数
+function sayHi (name, message) {
+  alert('hello ' + name + ',' + message)
+}
+sayHi('Nicholas', 'how are you today?')
+
+function sum2 (num1, num2) {
+  return num1 + num2
+}
+alert(sum2(1, 2))
+
+function DIFF (num1, num2) {
+  if (num1 < num2) {
+    return num2 - num1
+  } else {
+    return num1 - num2
+  }
+}
+var result15 = DIFF(1, 2)
+alert(result15)
