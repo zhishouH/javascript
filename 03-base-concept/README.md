@@ -98,11 +98,84 @@
     - '>='
     - '<='
   - (7) 相等操作符
+    - 相等(==)与不相等(!=) '先转换在比较'
+    - 全等(===)与不全等(!==) '仅比较而不转换'
+  - (8) 条件操作符' ? : '
+    - variable = boolean_expression ? true_value : false_value
+  - (9) 赋值操作符 '='
+  - (10) 逗号操作符
+    - var num1 = 1, num2 = 2, num3 = 3
 
-
-
-
-      
+- 6、语句
+  - (1) if语句
+    - 单分支
+    - 双分支
+    - 多分支
+  - (2) do-while语句
+    ```
+    do {
+      statment
+    } while (expression)
+    ```
+  - (3)while语句
+    ```
+    while(expression) {
+      statment
+    }
+    ```
+  - (4) for语句
+    ```
+    for(initialization; expression; post-loop-expression) {
+      statment
+    }
+    ``` 
+  - (5) for-in语句
+    ```
+    for (property in expression) {
+      statment
+    }
+    ```
+  - (6) label语句
+    - `label:statment`
+  - (7) break和continue语句
+  - (8) with语句
+    - `with (expression) statment`
+  - (9) switch语句
+    ```
+    switch (expression) {
+      case value:statment
+        break
+      case value:statment
+        break
+      case value:statment
+        break
+      case value:statment
+        break
+      default:statment
+    }
+    ```
+- 7、函数
+  ```
+  function functionName(arg0, agr1,...,argN) {
+    statments
+  }
+  ```
+  - 理解参数
+  - 没有重载
+- 8、小结
+  - ECMAScript中的基本数据类型包括Undefined、Null、Boolean、Number和String
+  - ECMAScript没有为整数和浮点数值分别定义不同的数据类型，Number类型可以用于表示所有数值
+  - ECMAScript中的复杂数据类型，Object类型，该类型是这门语言中所有对象的基础类型
+  - 严格模式为这门语言中容易出错的地方施加了限制
+  - ECMAScript的操作符包括算术操作符、布尔操作符、关系操作符、相等操作符和赋值操作符
+  - ECMAScript的语句包括if语句、for语句、switch语句等
+  - 无须指定函数的返回值，因为任何ECMAScript函数都可以在任何时候返回任何值
+  - 未指定返回值的函数返回的是一个特殊的undefined值
+  - ECMAScript中没有函数签名的概念，因为函数参数是以一个包含零个或多个值的数组的形式传递的
+  - 可以向ECMAScript函数传递任意数量的参数，并且可以通过arguments对象来访问这些参数
+  - 由于不存在函数签名的特性，ECMAScript函数不能重载
+    
                 
-                
+
+               
                  
