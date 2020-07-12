@@ -58,3 +58,5 @@
 // instanceof
 var person = new Object()
 console.log(person instanceof Object)
+console.log(person instanceof Array)
+console.log(person instanceof RegExp)
