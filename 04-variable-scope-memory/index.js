@@ -56,7 +56,44 @@
 // console.log(typeof o)
 
 // instanceof
-var person = new Object()
-console.log(person instanceof Object)
-console.log(person instanceof Array)
-console.log(person instanceof RegExp)
+// var person = new Object()
+// console.log(person instanceof Object)
+// console.log(person instanceof Array)
+// console.log(person instanceof RegExp)
+
+// 执行环境及作用域
+// var color = 'blue'
+// function changeColor () {
+//   if (color === 'blue') {
+//     color = 'red'
+//   } else {
+//     color = 'blue'
+//   }
+// }
+// changeColor()
+// console.log('Color is now ' + color)
+
+// var color = 'blue'
+// function changeColor () {
+//   var anotherColor = 'red'
+//   function swapColor () {
+//     var tempColor = anotherColor
+//     anotherColor = color
+//     color = tempColor
+//   }
+//   swapColor()
+// }
+// changeColor()
+// console.log(color)
+
+// 延长作用域链
+function buildUrl () {
+  var qs = '?debug=true'
+  with(location) {
+    var url = href + qs
+  }
+  return url
+}
+var result = buildUrl()
+console.log(result)
+
