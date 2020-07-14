@@ -87,13 +87,38 @@
 // console.log(color)
 
 // 延长作用域链
-function buildUrl () {
-  var qs = '?debug=true'
-  with(location) {
-    var url = href + qs
-  }
-  return url
-}
-var result = buildUrl()
-console.log(result)
+// function buildUrl () {
+//   var qs = '?debug=true'
+//   with(location) {
+//     var url = href + qs
+//   }
+//   return url
+// }
+// var result = buildUrl()
+// console.log(result)
 
+// 没有块级作用域
+// if (true) {
+//   var color = 'blue'
+// }
+// console.log(color)
+
+// for (var i = 0; i < 10; i++) {
+//   doSomething(i)
+// }
+// console.log(i)
+
+// 声明变量
+// function add (num1, num2) {
+//   var sum = num1 + num2
+//   return sum
+// }
+// var result = add(10, 20) // 30
+// console.log(sum) // 由于sum不是有效的变量，因此会导致错误
+
+// function add (num1, num2) {
+//   sum = num1 + num2
+//   return sum
+// }
+// var result = add(10, 20)
+// console.log(sum)
