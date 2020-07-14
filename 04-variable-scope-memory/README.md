@@ -12,6 +12,9 @@
     result = variable instanceof constructor
     ```
 - 2、执行环境及作用域
-  - 延长作用域链
+  - (1) 延长作用域链
     - try-catch语句的catch块
     - with语句
+  - (2)没有块级作用域
+    - 声明变量
+    - 查询标识符
