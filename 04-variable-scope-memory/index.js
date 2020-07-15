@@ -122,3 +122,18 @@
 // }
 // var result = add(10, 20)
 // console.log(sum)
+
+// 查询标识符
+// var color = 'blue'
+// function getColor () {
+//   return color
+// }
+// console.log(getColor())  //blue
+
+// var color = 'blue'
+// function getColor () {
+//   var color = 'red'
+//   return color
+// }
+// console.log(getColor()) // red
+// console.log(window.color) // blue
