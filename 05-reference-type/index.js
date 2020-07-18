@@ -62,23 +62,30 @@
 // console.log(colors.valueOf()) // red,blue,green
 // console.log(colors) // red,blue,green
 
-var person1 = {
-  toLocaleString: function () {
-    return 'zhihsouh'
-  },
-  toString: function () {
-    return 'pepsi'
-  }
-}
-var person2 = {
-  toLocaleString: function () {
-    return 'shabi'
-  },
-  toString: function () {
-    return 'hanhan'
-  }
-}
-var people = [person1, person2]
-console.log(people)
-console.log(people.toString())
-console.log(people.toLocaleString())
+// var person1 = {
+//   toLocaleString: function () {
+//     return 'zhihsouh'
+//   },
+//   toString: function () {
+//     return 'pepsi'
+//   }
+// }
+// var person2 = {
+//   toLocaleString: function () {
+//     return 'shabi'
+//   },
+//   toString: function () {
+//     return 'hanhan'
+//   }
+// }
+// var people = [person1, person2]
+// console.log(people)
+// console.log(people.toString())
+// console.log(people.toLocaleString())
+
+// join()方法
+// var colors = ['red', 'green', 'blue']
+// console.log(colors.join(',')) // red,green,blue
+// console.log(colors.join(' || ')) // red || green || blue
+
+// 栈方法
