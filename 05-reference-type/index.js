@@ -89,3 +89,24 @@
 // console.log(colors.join(' || ')) // red || green || blue
 
 // 栈方法
+// var colors = new Array()  // 创建一个数组
+// var count = colors.push('red', 'green')  // 推入两项
+// console.log(count) // 2
+
+// count = colors.push('black')  // 推入一项
+// console.log(count) // 3
+
+// var item = colors.pop()  // 取得最后一项
+// console.log(item) // black
+// console.log(colors.length) // 2
+
+// var colors = ['red', 'blue'] // 创建一个数组
+// colors.push('brown') // 推入一项
+// colors[3] = 'black' // 添加一项
+// console.log(colors.length)
+
+// var item = colors.pop() // 弹出最后一项
+// console.log(item)
+
+// 队列方法
+var colors
