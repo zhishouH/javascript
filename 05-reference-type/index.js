@@ -109,4 +109,13 @@
 // console.log(item)
 
 // 队列方法
-var colors
+var colors = new Array() // 创建一个数组
+var count = colors.push('red', 'green') // 推入两项
+console.log(count) // 2
+
+count = colors.push('black') // 推入一项
+console.log(count) // 3
+
+var item = colors.shift()
+console.log(item)
+console.log(colors.length)
