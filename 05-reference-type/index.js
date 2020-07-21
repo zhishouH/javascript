@@ -109,13 +109,29 @@
 // console.log(item)
 
 // 队列方法
-var colors = new Array() // 创建一个数组
-var count = colors.push('red', 'green') // 推入两项
-console.log(count) // 2
+// var colors = new Array() // 创建一个数组
+// var count = colors.push('red', 'green') // 推入两项
+// console.log(count) // 2
 
-count = colors.push('black') // 推入一项
-console.log(count) // 3
+// count = colors.push('black') // 推入一项
+// console.log(count) // 3
 
-var item = colors.shift()
-console.log(item)
-console.log(colors.length)
+// var item = colors.shift()  // 取得第一项
+// console.log(item)
+// console.log(colors.length)
+
+// var colors = new Array() // 创建数组
+// var count = colors.unshift('red', 'green') // 推入两项
+// console.log(count) // 2
+
+// count = colors.unshift('black') // 推入一项
+// console.log(count) // 3
+
+// var item = colors.pop() // 取得最后一项
+// console.log(item) // green
+// console.log(colors.length) // 2
+
+// 重排序方法
+var values = [1, 2, 3, 4, 5]
+values.reverse()
+console.log(values)
