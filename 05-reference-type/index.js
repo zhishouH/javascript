@@ -151,4 +151,14 @@ function compare (value1, value2) {
 }
 var values = [0, 1, 5, 10, 15]
 values.sort(compare)
-console.log(values)
+console.log(values) // 0,1,5,10,15
+
+// function compare (value1, value2) {
+//   return value2 - value1
+// }
+
+// 操作方法
+// var colors = ['red', 'green', 'blue']
+// var colors2 = colors.concat('yellow', ['black', 'brown'])
+// console.log(colors)
+// console.log(colors2)
