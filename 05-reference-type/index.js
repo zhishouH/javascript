@@ -140,25 +140,43 @@
 // values.sort()
 // console.log(values) // 0,1,10,15,5
 
-function compare (value1, value2) {
-  if (value1 < value2) {
-    return -1
-  } else if (value1 > value2) {
-    return 1
-  } else {
-    return 0
-  }
-}
-var values = [0, 1, 5, 10, 15]
-values.sort(compare)
-console.log(values) // 0,1,5,10,15
+// function compare (value1, value2) {
+//   if (value1 < value2) {
+//     return -1
+//   } else if (value1 > value2) {
+//     return 1
+//   } else {
+//     return 0
+//   }
+// }
+// var values = [0, 1, 5, 10, 15]
+// values.sort(compare)
+// console.log(values) // 0,1,5,10,15
 
 // function compare (value1, value2) {
 //   return value2 - value1
 // }
 
 // 操作方法
+// concat()方法
 // var colors = ['red', 'green', 'blue']
 // var colors2 = colors.concat('yellow', ['black', 'brown'])
-// console.log(colors)
-// console.log(colors2)
+// console.log(colors) // ["red", "green", "blue"]
+// console.log(colors2) // ["red", "green", "blue", "yellow", "black", "brown"]
+
+// slice()方法
+// var colors = ['red', 'green', 'blue', 'yellow', 'purple']
+// var colors2 = colors.slice(1)
+// var colors3 = colors.slice(1, 4)
+// console.log(colors2) // ["green", "blue", "yellow", "purple"]
+// console.log(colors3) // ["green", "blue", "yellow"]
+
+// splice()方法
+var colors = ['red', 'green', 'blue']
+var removed = colors.splice(0, 1) // 删除第一项
+console.log(colors) // ["green", "blue"]
+console.log(removed) // ["red"]
+
+removed = colors.splice(1, 0, 'yellow', 'orange')
+console.log(colors)
+console.log(removed)
