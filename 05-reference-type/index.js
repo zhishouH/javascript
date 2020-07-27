@@ -172,15 +172,36 @@
 // console.log(colors3) // ["green", "blue", "yellow"]
 
 // splice()方法
-var colors = ['red', 'green', 'blue']
-var removed = colors.splice(0, 1) // 删除第一项
-console.log(colors) // ["green", "blue"]
-console.log(removed) // ["red"]
+// var colors = ['red', 'green', 'blue']
+// var removed = colors.splice(0, 1) // 删除第一项
+// console.log(colors) // ["green", "blue"]
+// console.log(removed) // ["red"]
 
-removed = colors.splice(1, 0, 'yellow', 'orange') // 从位置1开始插入两项
-console.log(colors) // ["green", "yellow", "orange", "blue"]
-console.log(removed) // 返回一个空数组
+// removed = colors.splice(1, 0, 'yellow', 'orange') // 从位置1开始插入两项
+// console.log(colors) // ["green", "yellow", "orange", "blue"]
+// console.log(removed) // 返回一个空数组
 
-removed = colors.splice(1, 1, 'red', 'purple') // 插入两项
-console.log(colors) // "green", "red", "purple", "orange", "blue"]
-console.log(removed) // yellow
+// removed = colors.splice(1, 1, 'red', 'purple') // 插入两项
+// console.log(colors) // "green", "red", "purple", "orange", "blue"]
+// console.log(removed) // yellow
+
+// 位置方法
+// var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+// console.log(numbers.indexOf(4)) // 3
+// console.log(numbers.lastIndexOf(4)) // 5
+
+// console.log(numbers.indexOf(4, 4)) // 5
+// console.log(numbers.lastIndexOf(4, 4)) // 3
+
+// var person = {
+//   name: 'zhishouh'
+// }
+// var people = [{
+//   name: 'zhishouh'
+// }]
+// var morePeople = [person]
+
+// console.log(people.indexOf(person)) // -1
+// console.log(morePeople.indexOf(person)) // 0
+
+// 迭代方法
