@@ -205,3 +205,35 @@
 // console.log(morePeople.indexOf(person)) // 0
 
 // 迭代方法
+// var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+// var everyResult = numbers.every(function (item, index, array) {
+//   return (item > 2)
+// })
+// console.log(everyResult) // false
+
+// var someResult = numbers.some(function (item, index, array) {
+//   return (item > 2)
+// })
+// console.log(someResult) // ture
+
+// var filterResult = numbers.filter(function (item, index, array) {
+//   return (item > 2)
+// })
+// console.log(filterResult)
+
+// var mapResult = numbers.map(function (item, index, array) {
+//   return (item * 2)
+// })
+// console.log(mapResult)
+
+// 归并方法
+// var values = [1, 2, 3, 4, 5]
+// var sum = values.reduce(function (prev, cur, index, array) {
+//   return (prev + cur)
+// })
+// console.log(sum) // 15
+
+// var sum2 = values.reduceRight(function (prev, cur, index, array) {
+//   return (prev + cur)
+// })
+// console.log(sum2)
