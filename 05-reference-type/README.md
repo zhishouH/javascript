@@ -103,10 +103,10 @@
     // green
     ```
     - [2] 转换方法
-      - toLocaleString()
-      - toString()
-      - valueOf()
-      - join()
+      - toLocaleString()-调用此方法时会创建一个数组值的以逗号分隔得字符串
+      - toString()-调用此方法会返回由数组中的每个值的字符串形式拼接而成的一个以逗号分隔的字符串
+      - valueOf()-调用此方法返回的还是数组本身
+      - join()-调用此方法将接收一个参数作为分隔符的字符串然后返回包含数组项的字符串
     ```
     var colors = ['red', 'blue', 'green']
     console.log(colors.toString())  // red,blue,green
@@ -141,10 +141,35 @@
       console.log(colors.join(','))  // red,green,blue
       console.log(colors.join('||'))  // red||green||blue
       ```
-    - [3] 栈方法 (后进先出)
+    - [3] 栈方法 
+      - 一种后进先出的数据结构，也就是最新添加的项最早被移除；栈中项的推入和弹出只发生在栈的顶部
       - push()方法-推入参数添加到数组末尾并返回修改后的数组长度
       - pop()方法-从数组末尾移除最后一项并减少数组的length值，返回移除的项
-    - [4] 队列方法 (先进先出)
+      ```
+      var colors = new Array()  // 创建一个数组
+      var count = colors.push('red', 'green')  // 推入两项
+      console.log(count)  // 2
+
+      count = colors.push('black')  // 推入一项
+      console.log(count)  // 3
+
+      var item = colors.pop()  // 弹出最后一项
+      console.log(item)  // black
+      console.log(colors.length)  // 2
+      ```
+      - 可以将栈方法与其他数组方法连用
+      ```
+      var colors = ['red', 'blue']
+      colors.push('brown') // 推入一项
+      colors[3] = 'black'  // 添加一项
+      console.log(colors.length)  // 4
+
+      var item = colors.pop()  // 弹出最后一项
+      console.log(item)  // black
+      console.log(colors.length)  // 3
+      ```
+    - [4] 队列方法
+      -  一种先进先出的数据结构，队列在列表的末端添加项，从列表的前端移除项
       - shift()方法-移除数组中的第一个项并返回该值同时将数组长度减一
       - unshift()方法-在数组前端添加任意个项并返回新数组的长度
     - [5] 重排序方法
