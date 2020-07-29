@@ -87,18 +87,70 @@
     colors[colors.length] = 'black'  // 在数组末尾添加一项black
     colors[colors.length] = 'brown'  // 在数组末尾添加一项brown
     ```
-    - (1) 检测数组(Array.isArray(values))
-    - (2) 转换方法
-    - (3) 栈方法 (后进先出)
+
+  - (4) Array类型中的方法
+    - [1] 检测数组
+    ```
+    Array.isArray()方法是最终确定某个值到底是不是数组
+    var colors = ['red', 'blue', 'green']
+    if (Array.isArray(colors)) {
+      for (var i = 0; i < colors.length; i++) {
+        console.log(colors[i])
+      }
+    }
+    // red 
+    // blue
+    // green
+    ```
+    - [2] 转换方法
+      - toLocaleString()
+      - toString()
+      - valueOf()
+      - join()
+    ```
+    var colors = ['red', 'blue', 'green']
+    console.log(colors.toString())  // red,blue,green
+    console.log(colors.valueOf())  // red,blue,green
+    console.log(colors)  // console.log()接受参数后调用toString() red,blue,green
+    ```
+    ```
+    var person1 = {
+      toLocaleString: function () {
+        return 'zhishouh'
+      },
+      toString: function () {
+        return 'pepsi'
+      }
+    }
+    var person2 = {
+      toLocaleString: function () {
+        return 'zhishouhuang'
+      },
+      toString: function () {
+        return 'pepsi'
+      }
+
+      var people = [person1, person2]
+      console.log(people) // pepsi,pepsi
+      console.log(people.toString)  // pepsi,pepsi
+      console.log(people.toLocaleString)  // zhishouh,zhishouhuang
+    }
+      ```
+      ```
+      var colors = ['red', 'green', 'blue']
+      console.log(colors.join(','))  // red,green,blue
+      console.log(colors.join('||'))  // red||green||blue
+      ```
+    - [3] 栈方法 (后进先出)
       - push()方法-推入参数添加到数组末尾并返回修改后的数组长度
       - pop()方法-从数组末尾移除最后一项并减少数组的length值，返回移除的项
-    - (4) 队列方法 (先进先出)
+    - [4] 队列方法 (先进先出)
       - shift()方法-移除数组中的第一个项并返回该值同时将数组长度减一
       - unshift()方法-在数组前端添加任意个项并返回新数组的长度
-    - (5) 重排序方法
+    - [5] 重排序方法
       - reverse()方法-反转数组项的顺序
       - sort()方法-按升序排列数组项，最小值排在最前面,最大值排在最后面(比较的是字符串)
-    - (6) 操作方法
+    - [6] 操作方法
       - concat()方法-基于当前数组中的所有项创建一个新数组
       - slice()方法-基于当前数组的中的一或多个项创建一个新数组
         - 接受一个参数时，slice()方法返回从该参数指定的位置开始到当前数组末尾的所有项；例如slice(1)即从数组第array[1]开始到数组末尾的所有项
@@ -107,14 +159,14 @@
         - 删除-两个参数，一个要删除项的位置和一个要删除的项数；例：splice(0，2)即删除数组中的第0项和第1项(返回删除的项)
         - 插入-三个参数，起始位置，0(要删除的项数)，要插入的项；例：splice(2，0，"red")即从当前数组的位置2开始插入字符串red
         - 替换-三个参数，起始位置，要删除的项数，要插入的任意数量的项；例：splice(2,1,"red","green")会删除当前数组位置2的项，然后从位置2插入字符串red,green
-    - (7) 位置方法(返回要查找项在数组中的位置,两个参数：要查找的项和表示查找起点的位置)
+    - [7] 位置方法(返回要查找项在数组中的位置,两个参数：要查找的项和表示查找起点的位置)
       - indexOf()方法-从数组的开头(位置0)开始向后查找
       - lastIndexOf()方法-从数组的末尾开始向前查找
-    - (8) 迭代方法 
+    - [8] 迭代方法 
       - every()
       - filter()
       - forEach()
       - map()
       - some()
-    - (9) 归并方法
+    - [9] 归并方法
       
