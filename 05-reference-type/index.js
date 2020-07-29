@@ -30,7 +30,11 @@
 // displayInfo({
 //   name: 'pepsi'
 // })
-
+// var person = {
+//   name: 'zhishouh'
+// }
+// console.log(person.name) // zhishouh
+// console.log(person['name'])
 // Array类型
 // var colors = new Array()
 // var colors = new Array(20)
@@ -162,7 +166,7 @@
 // var colors = ['red', 'green', 'blue']
 // var colors2 = colors.concat('yellow', ['black', 'brown'])
 // console.log(colors) // ["red", "green", "blue"]
-// console.log(colors2) // ["red", "green", "blue", "yellow", "black", "brown"]
+// console.log(colors2) //["red", "green", "blue", "yellow", "black", "brown"]
 
 // slice()方法
 // var colors = ['red', 'green', 'blue', 'yellow', 'purple']
