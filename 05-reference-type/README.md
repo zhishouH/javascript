@@ -255,9 +255,18 @@
       console.log(colors)  // red, green, blue
       console.log(colors2)  // red, green, blue, yellow, black, brown
       ```
-      - slice()方法-基于当前数组的中的一或多个项创建一个新数组
-        - 接受一个参数时，slice()方法返回从该参数指定的位置开始到当前数组末尾的所有项；例如slice(1)即从数组第array[1]开始到数组末尾的所有项
-        - 接受两个参数时，slice()方法返回项的起始和结束位置；例如slice(1,4)即从数组第array[1]开始到array[3]的所有项
+      - slice()方法-基于当前数组中的一或多个项创建一个新数组
+      ```
+      1、接受一个参数时，slice()方法返回从该参数指定的位置开始到当前数组末尾的所有项
+      2、接受两个参数时，slice()方法返回项的起始和结束位置之间的项，不包括结束位置的项
+      var colors = ['red', 'green', 'blue', 'yellow', 'purple']
+      var colors2 = colors.slice(1)
+      var colors3 = colors.slice(1,4)
+
+      console.log(colors)  // red, green, blue, yellow, purple
+      console.log(colors2)  // green, blue, yellow, purple
+      console.log(colors3)  // green, blue, yellow
+      ```
       - splice()方法
         - 删除-两个参数，一个要删除项的位置和一个要删除的项数；例：splice(0，2)即删除数组中的第0项和第1项(返回删除的项)
         - 插入-三个参数，起始位置，0(要删除的项数)，要插入的项；例：splice(2，0，"red")即从当前数组的位置2开始插入字符串red
