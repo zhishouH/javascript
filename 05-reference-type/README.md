@@ -61,7 +61,7 @@
     var colors = new Array(20)  // 创建length值为20的数组
     var colors = new Array('red', 'blue', 'green')  // 创建包含3个字符串值得数组
     ```
-    - [2]数组字面量表示法
+    - [2] 数组字面量表示法
     ```
     var colors = ['red', 'blue', 'green']  // 创建一个包含3个字符串得数组
     var name = []  // 创建一个空数组
