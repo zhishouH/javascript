@@ -268,9 +268,24 @@
       console.log(colors3)  // green, blue, yellow
       ```
       - splice()方法
-        - 删除-两个参数，一个要删除项的位置和一个要删除的项数；例：splice(0，2)即删除数组中的第0项和第1项(返回删除的项)
-        - 插入-三个参数，起始位置，0(要删除的项数)，要插入的项；例：splice(2，0，"red")即从当前数组的位置2开始插入字符串red
-        - 替换-三个参数，起始位置，要删除的项数，要插入的任意数量的项；例：splice(2,1,"red","green")会删除当前数组位置2的项，然后从位置2插入字符串red,green
+        - 删除-两个参数，一个要删除项的位置和一个要删除的项数
+        - 插入-三个参数，起始位置，0(要删除的项数)，要插入的项
+        - 替换-三个参数，起始位置，要删除的项数，要插入的任意数量的项
+        - splice()方法始终都会返回一个数组，该数组中包含从原始数组中删除的项(如果没有删除任何项，则返回一个空数组)
+        ```
+        var colors = ['red', 'green', 'blue']  // 创建一个包含三个项的数组
+        var removed = colors.splice(0,1)  // 删除第一项
+        console.log(colors)  // green, blue
+        console.log(removed)  // red  返回的数组只包含一项
+        
+        removed = colors.splice(1, 0, 'yellow', 'orange')  // 从位置1开始插入两项
+        console.log(colors)  // green, yellow, orange, blue
+        console.log(removed)  // 返回空数组
+
+        removed = colors.splice(1, 1, 'red', 'purple')
+        console.log(colors)  // green, red, purple, orange, blue
+        console.log(removed)  // yellow
+        ``` 
     - [7] 位置方法(返回要查找项在数组中的位置,两个参数：要查找的项和表示查找起点的位置)
       - indexOf()方法-从数组的开头(位置0)开始向后查找
       - lastIndexOf()方法-从数组的末尾开始向前查找
