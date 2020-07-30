@@ -87,7 +87,6 @@
     colors[colors.length] = 'black'  // 在数组末尾添加一项black
     colors[colors.length] = 'brown'  // 在数组末尾添加一项brown
     ```
-
   - (4) Array类型中的方法
     - [1] 检测数组
     ```
@@ -107,50 +106,50 @@
       - toString()-调用此方法会返回由数组中的每个值的字符串形式拼接而成的一个以逗号分隔的字符串
       - valueOf()-调用此方法返回的还是数组本身
       - join()-调用此方法将接收一个参数作为分隔符的字符串然后返回包含数组项的字符串
-    ```
-    var colors = ['red', 'blue', 'green']
-    console.log(colors.toString())  // red,blue,green
-    console.log(colors.valueOf())  // red,blue,green
-    console.log(colors)  // console.log()接受参数后调用toString() red,blue,green
-    ```
-    ```
-    var person1 = {
-      toLocaleString: function () {
-        return 'zhishouh'
-      },
-      toString: function () {
-        return 'pepsi'
+      ```
+      var colors = ['red', 'blue', 'green']
+      console.log(colors.toString())  // red,blue,green
+      console.log(colors.valueOf())  // red,blue,green
+      console.log(colors)  // console.log()接受参数后调用toString() red,blue,green
+      ```
+      ```
+      var person1 = {
+        toLocaleString: function () {
+          return 'zhishouh'
+        },
+        toString: function () {
+          return 'pepsi'
+        }
       }
-    }
-    var person2 = {
-      toLocaleString: function () {
-        return 'zhishouhuang'
-      },
-      toString: function () {
-        return 'pepsi'
-      }
+      var person2 = {
+        toLocaleString: function () {
+          return 'zhishouhuang'
+        },
+        toString: function () {
+          return 'pepsi'
+        }
 
-      var people = [person1, person2]
-      console.log(people) // pepsi,pepsi
-      console.log(people.toString)  // pepsi,pepsi
-      console.log(people.toLocaleString)  // zhishouh,zhishouhuang
-    }
-      ```
-      ```
-      var colors = ['red', 'green', 'blue']
-      console.log(colors.join(','))  // red,green,blue
-      console.log(colors.join('||'))  // red||green||blue
-      ```
+        var people = [person1, person2]
+        console.log(people) // pepsi,pepsi
+        console.log(people.toString)  // pepsi,pepsi
+        console.log(people.toLocaleString)  // zhishouh,zhishouhuang
+      }
+        ```
+        ```
+        var colors = ['red', 'green', 'blue']
+        console.log(colors.join(','))  // red,green,blue
+        console.log(colors.join('||'))  // red||green||blue
+        ```
     - [3] 栈方法 
       - 一种后进先出的数据结构，也就是最新添加的项最早被移除；栈中项的推入和弹出只发生在栈的顶部
       - push()方法-推入参数添加到数组末尾并返回修改后的数组长度
       - pop()方法-从数组末尾移除最后一项并减少数组的length值，返回移除的项
       ```
       var colors = new Array()  // 创建一个数组
-      var count = colors.push('red', 'green')  // 推入两项
+      var count = colors.push('red', 'green')  // 推入两项到数组末尾
       console.log(count)  // 2
 
-      count = colors.push('black')  // 推入一项
+      count = colors.push('black')  // 推入一项到数组末尾
       console.log(count)  // 3
 
       var item = colors.pop()  // 弹出最后一项
@@ -160,7 +159,7 @@
       - 可以将栈方法与其他数组方法连用
       ```
       var colors = ['red', 'blue']
-      colors.push('brown') // 推入一项
+      colors.push('brown') // 推入一项到数组末尾
       colors[3] = 'black'  // 添加一项
       console.log(colors.length)  // 4
 
@@ -170,13 +169,92 @@
       ```
     - [4] 队列方法
       -  一种先进先出的数据结构，队列在列表的末端添加项，从列表的前端移除项
-      - shift()方法-移除数组中的第一个项并返回该值同时将数组长度减一
+      - shift()方法-移除数组中的第一个项并返回该项同时将数组长度减一
       - unshift()方法-在数组前端添加任意个项并返回新数组的长度
+      ```
+      var colors = new Array()  // 创建一个数组
+      var count = colors.push('red', 'green')  // 推入两项到数组末尾
+      console.log(count)  // 2
+
+      count = colors.push('black')  // 推入一项到数组末尾
+      console.log(count)  // 2
+
+      var item = colors.shift()  // 取得第一项
+      console.log(item)  // red
+      console.log(colors)  // 2
+      ```
+      ```
+      var colors = new Array()  // 创建一个数组
+      var count = colors.unshift('red', 'green')  // 推入两项到数组前端
+      console.log(count)  // 2
+
+      count = colors.unshift('black')  // 推入一项到数组前端
+      console.log(count)  // 3
+
+      var item = colors.pop()  // 取得最后一项
+      console.log(item)  // green
+      console.log(colors)  // 2
+      ```
     - [5] 重排序方法
       - reverse()方法-反转数组项的顺序
-      - sort()方法-按升序排列数组项，最小值排在最前面,最大值排在最后面(比较的是字符串)
+      - sort()方法-按升序排列数组项，最小值排在最前面,最大值排在最后面
+      - 比较函数
+      ```
+      var values = [1, 2, 3, 4, 5]
+      values.reverse()
+      console.log(values)  // 5, 4, 3, 2, 1
+      ```
+      ```
+      var values = [0, 1, 5, 10, 15]
+      values.sort()
+      console.log(values)  // 0, 1, 10, 15, 5
+      // sort()方法会调用每个数组项的toString()转型方法再进行比较
+      ```
+      ```
+      function compare(value1, value2) {
+        if (value1 < value2) {
+          return -1
+        } else if (value1 > value2) {
+          return 1
+        } else {
+          return 0
+        }
+      }
+      var values = [0, 1, 5, 10, 15]
+      values.sort(compare)
+      console,log(values)  // 0, 1, 5, 10, 15
+      ```
+      ```
+      function compare(value1, value2) {
+        if (value1 < value2) {
+          return 1
+        } else if (value1 > value2) {
+          return -1
+        } else {
+          return 0
+        }
+      }
+      var values = [0, 1, 5, 10, 15]
+      values.sort(compare)
+      console.log(values)  // 15, 10, 5, 1, 0
+      ```
+      ```
+      function compare(value1, value2) {
+        return value2 - value1
+      }
+      var values = [0, 1, 5, 10, 15]
+      values.sort(compare)
+      console.log(values)  // 15, 10, 5, 1, 0
+      ```
     - [6] 操作方法
       - concat()方法-基于当前数组中的所有项创建一个新数组
+      ```
+      var colors = ['red', 'green', 'blue']
+      var colors2 = colors.concat('yellow', ['black', 'brown'])
+
+      console.log(colors)  // red, green, blue
+      console.log(colors2)  // red, green, blue, yellow, black, brown
+      ```
       - slice()方法-基于当前数组的中的一或多个项创建一个新数组
         - 接受一个参数时，slice()方法返回从该参数指定的位置开始到当前数组末尾的所有项；例如slice(1)即从数组第array[1]开始到数组末尾的所有项
         - 接受两个参数时，slice()方法返回项的起始和结束位置；例如slice(1,4)即从数组第array[1]开始到array[3]的所有项
@@ -194,4 +272,3 @@
       - map()
       - some()
     - [9] 归并方法
-      
