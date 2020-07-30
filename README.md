@@ -19,7 +19,7 @@
       - [4] 队列方法 -> shift()、unshift()
       - [5] 重排序方法 -> reverse()、sort()
       - [6] 操作方法 -> concat()、slice()、splice() 
-      - [7] 位置方法
-      - [8] 迭代方法
-      - [9] 归并方法
+      - [7] 位置方法 -> indexOf()、lastIndexOf()
+      - [8] 迭代方法 -> every()、 filter()、 forEach()、 map()、 some()
+      - [9] 归并方法 -> reduce()、reduceRight()
 
