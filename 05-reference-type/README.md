@@ -286,13 +286,68 @@
         console.log(colors)  // green, red, purple, orange, blue
         console.log(removed)  // yellow
         ``` 
-    - [7] 位置方法(返回要查找项在数组中的位置,两个参数：要查找的项和表示查找起点的位置)
+    - [7] 位置方法
+      - 返回要查找的项在数组中的位置,或者在没有找到的情况下返回-1
+      - 两个参数：要查找的项和表示查找起点的位置
       - indexOf()方法-从数组的开头(位置0)开始向后查找
       - lastIndexOf()方法-从数组的末尾开始向前查找
+      ```
+      var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+      console.log(numbers.indexOf(4))  // 4
+      console.log(numbers.lastIndexOf(4))  // 5
+
+      console.log(numbers.indexOf(4, 4))  // 5
+      console.log(numbers.lastIndexOf(4, 4))  // 3
+
+      var person = {name: 'zhishouh'}
+      var people = [{name: 'zhishouh'}]
+      var morePeople = [person]
+      console.log(people.indexOf(person))  // -1 
+      console.log(morePeople.indexOf(person))  // 0     
+      ```
     - [8] 迭代方法 
-      - every()
-      - filter()
-      - forEach()
-      - map()
-      - some()
+      - 方法接收两个参数：要在每一项上运行的函数和(可选的)运行该函数的作用域对象
+      - 传入方法中的函数接收三个参数：数组项的值、该项在数组中的位置、数组对象本身
+      - every()：对数组中的每一项运行给定函数，如果该函数对每一项都返回true，则返回true
+      - filter()：对数组中的每一项运行给定函数，返回该函数会返回true的项组成的数组
+      - forEach()：对数组中的每一项运行给定函数，这个方法没有返回值
+      - map()：对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组
+      - some()：对数组中的每一项运行给定函数，如果该函数对任一项返回true，则返回true
+      ```
+      every()和some():
+      var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+
+      var everyResult = numbers.every(function (item, index, array){
+        return (item > 2)
+      })
+      console.log(everyResult)  // false
+
+      var someResult = numbers.some(function (item, index, array){
+        return (item > 2)
+      })
+      console.log(someResult)  // true
+      ```
+      ```
+      filter()-利用指定函数确定是否在返回的数组中包含某一项:
+      var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+      var filterResult = numbers.fliter(function (item, index, array){
+        return (item > 2)
+      })
+      console.log(filterResult)  // [3, 4, 5, 4, 3]
+      ```
+      ```
+      map():
+      var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+      var mapResult = numbers.map(function (item, index, array) {
+        return (item * 2)
+      })
+      console.log(mapResult)  // [2, 4, 6, 8, 10, 8, 6, 4, 2]
+      ```
+      ```
+      forEach():
+      var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1]
+      numbers.forEach(function (item, index, array) {
+        // 执行某些操作
+      })
+      ```
     - [9] 归并方法
