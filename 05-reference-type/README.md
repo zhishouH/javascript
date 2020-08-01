@@ -383,3 +383,6 @@
   ```
   var now = new Date()
   ```
+  - (2) Date提供两个方法：
+    - Date.parse()
+    - Date.UTC()
