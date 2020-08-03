@@ -22,4 +22,6 @@
       - [7] 位置方法 -> indexOf()、lastIndexOf()
       - [8] 迭代方法 -> every()、 filter()、 forEach()、 map()、 some()
       - [9] 归并方法 -> reduce()、reduceRight()
+  - (3) Date类型
+    - 
 
