@@ -402,6 +402,5 @@
 
     var someDate4 = new Date('May 25,2004')
     console.log(someDate4) // 直接将表示日期的字符串传给Date构造函数，也会在后台调用Date.parse(),Tue May 25 2004 00:00:00 GMT+0800 (中国标准时间)
-
     ```
     - Date.UTC()
