@@ -263,8 +263,5 @@
 var y2k = new Date(Date.UTC(2000, 0))
 console.log(y2k) // Sat Jan 01 2000 08:00:00 GMT+0800 (中国标准时间)
 
-var allFivees = new Date(Date.UTC(2005, 4, 5, 17, 55, 55))
+var allFivees = new Date(Date.UTC(2005, 4, 5, 17, 55, 55)).toUTCString()
 console.log(allFivees) // Fri May 06 2005 01:55:55 GMT+0800 (中国标准时间)
-
-var allFivees2 = new Date(Date.UTC(2005, 4, 5, 17, 55, 55)).toUTCString()
-console.log(allFivees2)
