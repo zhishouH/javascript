@@ -386,7 +386,22 @@
   ```
   - (2) Date提供两个方法：
     - Date.parse()-接收一个表示日期的字符串参数，然后尝试根据这个字符串返回相应日期的毫秒数
-      - 参数接受的日期格式
+      - 参数接受的日期格式:
       - '月/日/年',如 6/13/2004
       - '英文月名 日 年', 如 January 12,2004
+      - '英文星期几 英文月名 日 年 时:分:秒 时区',如 Tue May 25 2004 00:00:00 GMT-0700
+    ```
+    var someDate = new Date(Date.parse('6/13/2004'))
+    console.log(someDate) // Sun Jun 13 2004 00:00:00 GMT+0800 (中国标准时间)
+
+    var someDate2 = new Date(Date.parse('January 12,2004'))
+    console.log(someDate2) // Mon Jan 12 2004 00:00:00 GMT+0800 (中国标准时间)
+
+    var someDate3 = new Date(Date.parse('Tue May 25 2004 00:00:00 GMT-0700'))
+    console.log(someDate3) // Tue May 25 2004 15:00:00 GMT+0800 (中国标准时间)
+
+    var someDate4 = new Date('May 25,2004')
+    console.log(someDate4) // 直接将表示日期的字符串传给Date构造函数，也会在后台调用Date.parse(),Tue May 25 2004 00:00:00 GMT+0800 (中国标准时间)
+
+    ```
     - Date.UTC()
