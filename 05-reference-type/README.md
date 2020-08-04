@@ -404,3 +404,11 @@
     console.log(someDate4) // 直接将表示日期的字符串传给Date构造函数，也会在后台调用Date.parse(),Tue May 25 2004 00:00:00 GMT+0800 (中国标准时间)
     ```
     - Date.UTC()
+      - Date.UTC()-接收年份、基于0的月份(一月是0，二月是1，以此类推)、月中的哪一天(1到31)、小时数(0到23)、分钟、秒以及毫秒
+      ```
+      var y2k = new Date(Date.UTC(2000, 0))
+      console.log(y2k) // Sat Jan 01 2000 08:00:00 GMT+0800 (中国标准时间)
+
+      var allFivees = new Date(Date.UTC(2005, 4, 5, 17, 55, 55))
+      console.log(allFivees) // Fri May 06 2005 01:55:55 GMT+0800 (中国标准时间)
+      ```
