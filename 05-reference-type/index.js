@@ -241,3 +241,9 @@
 //   return (prev + cur)
 // })
 // console.log(sum2)
+
+// Date类型
+var now = new Date()
+console.log(now) // 在调用Date构造函数而不传递参数的情况下，新创建的对象自动获得当前的日期和时间
+var someDate = new Date(Date.parse('May 25, 2004'))
+console.log(someDate) // Tue May 25 2004 00:00:00 GMT+0800 (中国标准时间)
