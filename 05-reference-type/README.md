@@ -448,3 +448,21 @@
       ```
   - (3) Date类型中的语法：
     - [1] 继承的方法
+      - toLocaleString():按照与浏览器设置的地区相适应的格式返回日期和时间
+      - toString():返回带有时区信息的日期和时间
+      - valueOf():返回日期的毫秒表示
+      ```
+      不同得浏览器调用toLocaleString()和toString()方法的结果不同
+      Chrome：
+      var date = new Date(2007,0,1)
+      console.log(date)  // Mon Jan 01 2007 00:00:00 GMT+0800 (中国标准时间)
+      console.log(date.toLocaleString())  // 2007/1/1 上午12:00:00
+      console.log(date.toString())  // Mon Jan 01 2007 00:00:00 GMT+0800 (中国标准时间)
+      console.log(date.valueOf())  // 1167580800000
+      ```
+    - [2] 日期格式化方法
+      - toDateString():以特定于实现的格式显示星期几、月、日和年
+      - toTimeString():以特定于实现的格式显示时、分、秒和时区
+      - toLocaleDateString():以特定于地区的格式显示星期几、月、日和年
+      - toLocaleTimeString():以特定于地区的格式显示时、分、秒
+      - toUTCString():以特定于实现的格式显示UTC日期
