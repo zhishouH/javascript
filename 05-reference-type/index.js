@@ -293,11 +293,20 @@
 // console.log(result)
 
 // 继承的方法
-var date1 = new Date(2007, 0, 1)
-var date2 = new Date(2007, 1, 1)
-console.log(date1)
-console.log(date1.toLocaleString())
-console.log(date1.toString())
-console.log(date1.valueOf())
-console.log(date2.valueOf())
-console.log(date1 > date2)
+// var date1 = new Date(2007, 0, 1)
+// var date2 = new Date(2007, 1, 1)
+// console.log(date1)
+// console.log(date1.toLocaleString())
+// console.log(date1.toString())
+// console.log(date1.valueOf())
+// console.log(date2.valueOf())
+// console.log(date1 > date2)
+
+// 日期格式化方法
+var now = new Date(2020, 7, 6, 15, 48, 48)
+console.log(now) // Thu Aug 06 2020 15:48:48 GMT+0800 (中国标准时间)
+console.log(now.toDateString()) // Thu Aug 06 2020
+console.log(now.toTimeString()) // 15:48:48 GMT+0800 (中国标准时间)
+console.log(now.toLocaleDateString()) // 2020/8/6
+console.log(now.toLocaleTimeString()) // 下午3:48:48
+console.log(now.toUTCString()) // Thu, 06 Aug 2020 07:48:48 GMT
