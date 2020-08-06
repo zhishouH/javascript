@@ -466,3 +466,12 @@
       - toLocaleDateString():以特定于地区的格式显示星期几、月、日和年
       - toLocaleTimeString():以特定于地区的格式显示时、分、秒
       - toUTCString():以特定于实现的格式显示UTC日期
+      ```
+      var now = new Date(2020, 7, 6, 15, 48, 48)
+      console.log(now) // Thu Aug 06 2020 15:48:48 GMT+0800 (中国标准时间)
+      console.log(now.toDateString()) // Thu Aug 06 2020
+      console.log(now.toTimeString()) // 15:48:48 GMT+0800 (中国标准时间)
+      console.log(now.toLocaleDateString()) // 2020/8/6
+      console.log(now.toLocaleTimeString()) // 下午3:48:48
+      console.log(now.toUTCString()) // Thu, 06 Aug 2020 07:48:48 GMT
+      ```
