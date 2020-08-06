@@ -87,7 +87,7 @@
     colors[colors.length] = 'black'  // 在数组末尾添加一项black
     colors[colors.length] = 'brown'  // 在数组末尾添加一项brown
     ```
-  - (4) Array类型中的方法
+  - (4) Array类型中的语法：
     - [1] 检测数组
     ```
     Array.isArray()方法是最终确定某个值到底是不是数组
@@ -380,12 +380,12 @@
 
 - 3、Date类型
   - (1) 创建日期对象
-  ```
-  var now = new Date()
-  // 在调用Date构造函数而不传递参数的情况下，新创建的对象自动获得当前的日期和时间
-  ```
-  - (2) Date提供两个方法：
-    - Date.parse()-接收一个表示日期的字符串参数，然后尝试根据这个字符串返回相应日期的毫秒数
+    ```
+    var now = new Date()
+    // 在调用Date构造函数而不传递参数的情况下，新创建的对象自动获得当前的日期和时间
+    ```
+  - (2) Date提供的方法：
+    - [1] Date.parse()-接收一个表示日期的字符串参数，然后尝试根据这个字符串返回相应日期的毫秒数
       - 参数接受的日期格式:
       - '月/日/年',如 6/13/2004
       - '英文月名 日 年', 如 January 12,2004
@@ -403,7 +403,7 @@
     var someDate4 = new Date('May 25,2004')
     console.log(someDate4) // 直接将表示日期的字符串传给Date构造函数，也会在后台调用Date.parse(),Tue May 25 2004 00:00:00 GMT+0800 (中国标准时间)
     ```
-    - Date.UTC()
+    - [2] Date.UTC()
       - Date.UTC()-接收年份、基于0的月份(一月是0，二月是1，以此类推)、月中的哪一天(1到31)、小时数(0到23)、分钟、秒以及毫秒数。
       - 在这些参数中，只有前两个参数(年和月)是必需的
       - 如果没有提供月中的天数，则假设天数为1；如果省略其他参数，则统统假设为0
@@ -413,4 +413,38 @@
 
       var allFivees = new Date(Date.UTC(2005, 4, 5, 17, 55, 55))
       console.log(allFivees) // Fri May 06 2005 01:55:55 GMT+0800 (中国标准时间)
+
+      var y2k2 = new Date(2000, 0)
+      console.log(y2k2) // Sat Jan 01 2000 00:00:00 GMT+0800 (中国标准时间)
+
+      var allFivees2 = new Date(2005, 4, 5, 17, 55, 55)
+      console.log(allFivees2) // Thu May 05 2005 17:55:55 GMT+0800 (中国标准时间)
       ```
+      - 日期和时间都基于本地时区而非GMT来创建
+    - [3] Date.now()
+      - 返回表示调用这个方法时的日期和时间的毫秒数
+      ```
+      // 取得开始时间
+      var start = Date.now()
+
+      // 调用函数
+      doSomething()
+
+      // 取得停止时间
+      // var stop = Date.now(),
+             result = stop - start
+      ```
+      - 在不支持Date.now()的浏览器中，使用+操作符获取对象的时间戳也可以达到同样的目的
+      ```
+      // 取得开始时间
+      var start = +new Date()
+
+      // 调用函数
+      doSomething()
+
+      // 取得停止时间
+      var stop = +new Date()
+          result = stop - start
+      ```
+  - (3) Date类型中的语法：
+    - [1] 继承的方法
