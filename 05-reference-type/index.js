@@ -292,5 +292,12 @@
 // result = stop - start
 // console.log(result)
 
-var start = Date.now()
-console.log(start)
+// 继承的方法
+var date1 = new Date(2007, 0, 1)
+var date2 = new Date(2007, 1, 1)
+console.log(date1)
+console.log(date1.toLocaleString())
+console.log(date1.toString())
+console.log(date1.valueOf())
+console.log(date2.valueOf())
+console.log(date1 > date2)
