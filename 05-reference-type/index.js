@@ -260,8 +260,37 @@
 // console.log(someDate4) // 直接将表示日期的字符串传给Date构造函数，也会在后台调用Date.parse(),Tue May 25 2004 00:00:00 GMT+0800 (中国标准时间)
 
 // Date.UTC()
-var y2k = new Date(Date.UTC(2000, 0))
-console.log(y2k) // Sat Jan 01 2000 08:00:00 GMT+0800 (中国标准时间)
+// var y2k = new Date(Date.UTC(2000, 0))
+// console.log(y2k) // Sat Jan 01 2000 08:00:00 GMT+0800 (中国标准时间)
 
-var allFivees = new Date(Date.UTC(2005, 4, 5, 17, 55, 55)).toUTCString()
-console.log(allFivees) // Fri May 06 2005 01:55:55 GMT+0800 (中国标准时间)
+// var allFivees = new Date(Date.UTC(2005, 4, 5, 17, 55, 55))
+// console.log(allFivees) // Fri May 06 2005 01:55:55 GMT+0800 (中国标准时间)
+
+// var y2k2 = new Date(2000, 0)
+// console.log(y2k2) // Sat Jan 01 2000 00:00:00 GMT+0800 (中国标准时间)
+
+// var allFivees2 = new Date(2005, 4, 5, 17, 55, 55)
+// console.log(allFivees2) // Thu May 05 2005 17:55:55 GMT+0800 (中国标准时间)
+
+// Date.now()
+// var start = Date.now()
+// console.log(start)
+
+// var stop = Date.now()
+// var result = stop - start
+// console.log(result)
+
+// var one = new Date(Date.now())
+// console.log(one)
+
+// var start2 = +new Date()
+// console.log(start2)
+
+// var stop2 = +new Date()
+// console.log(stop2)
+
+// result = stop - start
+// console.log(result)
+
+var start = Date.now()
+console.log(start)
