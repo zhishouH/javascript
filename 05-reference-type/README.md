@@ -475,9 +475,9 @@
       console.log(now.toLocaleTimeString()) // 下午3:48:48
       console.log(now.toUTCString()) // Thu, 06 Aug 2020 07:48:48 GMT
       ```
-    - [3] 日期/时间/组件方法
+    - [3] 日期/时间组件方法
       |序号|方法|说明|
-      |:--|:--|:--|
+      |:--:|:--|:--|
       |1|getTime()|返回表示日期的毫秒数；与valueOf()方法返回的值相同|
       |2|setTime(毫秒)|以毫秒数设置日期，会改变日期|
       |3|getFullYear()|取得4位数的年份(如2007而非仅07)|
