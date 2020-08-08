@@ -399,9 +399,10 @@
 
     var someDate3 = new Date(Date.parse('Tue May 25 2004 00:00:00 GMT-0700'))
     console.log(someDate3) // Tue May 25 2004 15:00:00 GMT+0800 (中国标准时间)
-
+    
+    // 直接将表示日期的字符串传给Date构造函数，也会在后台调用Date.parse()
     var someDate4 = new Date('May 25,2004')
-    console.log(someDate4) // 直接将表示日期的字符串传给Date构造函数，也会在后台调用Date.parse(),Tue May 25 2004 00:00:00 GMT+0800 (中国标准时间)
+    console.log(someDate4) // Tue May 25 2004 00:00:00 GMT+0800 (中国标准时间)
     ```
     - [2] Date.UTC()
       - Date.UTC()-接收年份、基于0的月份(一月是0，二月是1，以此类推)、月中的哪一天(1到31)、小时数(0到23)、分钟、秒以及毫秒数。
