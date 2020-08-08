@@ -399,7 +399,7 @@
 
     var someDate3 = new Date(Date.parse('Tue May 25 2004 00:00:00 GMT-0700'))
     console.log(someDate3) // Tue May 25 2004 15:00:00 GMT+0800 (中国标准时间)
-    
+
     // 直接将表示日期的字符串传给Date构造函数，也会在后台调用Date.parse()
     var someDate4 = new Date('May 25,2004')
     console.log(someDate4) // Tue May 25 2004 00:00:00 GMT+0800 (中国标准时间)
@@ -497,3 +497,18 @@
       |16|getUTCDay()|返回UTC日期中星期的星期几(其中0表示星期日，6表示星期六)|
       |17|getHours()|返回日期中的小时数(0到23)|
       |18|getUTCHours()|返回UTC日期中的小时数(0到23)|
+      |19|setHours(时)|设置日期中的小时数。传入的值超过23则增加月份的天数|
+      |20|setUTCHours(时)|设置UTC日期中的小时数。传入的值超过23则增加月份的天数|
+      |21|getMinutes()|返回日期中的分钟数(0到59)|
+      |22|getUTCMinutes()|返回UTC日期中的分钟数(0到59)|
+      |23|setMinutes(分)|设置日期中的分钟数。传入的值超过59则增加小时数|
+      |24|setUTCMinutes(分)|设置UTC日期中的分钟数。传入的值超过59则增加小时数|
+      |25|getSeconds|返回日期中的秒数(0到59)|
+      |26|getUTCSeconds|返回UTC日期中的秒数(0到59)|
+      |27|setSeconds(秒)|设置日期中的秒数。传入的值超过59会增加分钟数|
+      |28|setUTCSeconds(秒)|设置UTC日期中的秒数。传入的值超过59会增加分钟数|
+      |29|getMilliseconds()|返回日期中的毫秒数|
+      |30|getUTCMilliseconds()|返回UTC日期中的毫秒数|
+      |31|setMilliseconds(毫秒)|设置日期中的毫秒数|
+      |32|setUTCMilliseconds(毫秒)|设置UTC日期中的毫秒数|
+      |33|getTimezoneOffset()|返回本地时间与UTC时间差的分钟数。例如，美国东部标准时间返回300.在某地进入夏令时的情况下，这个值会有所变化|
