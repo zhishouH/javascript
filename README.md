@@ -12,7 +12,7 @@
     - 创建数组的基本方式
     - 读取和设置数组
     - length属性
-    - Array类型中的方法
+    - Array类型中的语法
       - [1] 检测数组 -> Array.isArray()
       - [2] 转换方法 -> toLocaleString()、toString()、valueOf()、join()
       - [3] 栈方法  -> push()、pop()
