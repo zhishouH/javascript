@@ -23,5 +23,13 @@
       - [8] 迭代方法 -> every()、 filter()、 forEach()、 map()、 some()
       - [9] 归并方法 -> reduce()、reduceRight()
   - (3) Date类型
-    - 
+    - 创建日期对象的方式
+    - Date提供的方法
+      - Date.parse()
+      - Date.UTC()
+      - Date.now()
+    - Date类型中的语法
+      - [1] 继承的方法 -> toLocaleString()、toString()、valueOf()
+      - [2] 日期格式化方法 -> toDateString()、toTimeString()、toLocaleDateString()、toLocaleTimeString()、toUTCString()
+      - [3] 日期/时间组件方法 -> 33个
 
