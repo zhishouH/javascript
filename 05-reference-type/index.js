@@ -311,10 +311,12 @@
 // console.log(now.toLocaleTimeString()) // 下午3:48:48
 
 // 日期、时间组件方法
-var now = new Date(2020, 7, 7, 14, 20, 20)
-console.log(now) // Fri Aug 07 2020 14:20:20 GMT+0800 (中国标准时间)
-console.log(now.getTime())
-// console.log(now.setTime())
-console.log(now.getUTCFullYear())
-console.log(now.getFullYear())
-console.log(now.setFullYear(2020))
+// var now = new Date(2020, 7, 7, 14, 20, 20)
+// console.log(now) // Fri Aug 07 2020 14:20:20 GMT+0800 (中国标准时间)
+// console.log(now.getTime())
+// // console.log(now.setTime())
+// console.log(now.getUTCFullYear())
+// console.log(now.getFullYear())
+// console.log(now.setFullYear(2020))
+
+// RegExp类型
