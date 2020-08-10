@@ -515,8 +515,10 @@
   - (4) RegExp类型
     - ECMAScript通过RegExp类型来支持正则表达式
     - 创建正则表达式
+      - 真则
     ```
     var expression = / pattern / flags
     pattern(模式):可以是任何简单或复杂的正则表达式，包含字符类、限定符、分组、向前查找以及反向引用
     flags(标志):用以标明正则表达式的行为
-    ```
+    ``` 
+    
