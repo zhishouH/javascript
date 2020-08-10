@@ -512,3 +512,4 @@
       |31|setMilliseconds(毫秒)|设置日期中的毫秒数|
       |32|setUTCMilliseconds(毫秒)|设置UTC日期中的毫秒数|
       |33|getTimezoneOffset()|返回本地时间与UTC时间差的分钟数。例如，美国东部标准时间返回300.在某地进入夏令时的情况下，这个值会有所变化|
+  - (4) RegExp类型
