@@ -513,3 +513,10 @@
       |32|setUTCMilliseconds(毫秒)|设置UTC日期中的毫秒数|
       |33|getTimezoneOffset()|返回本地时间与UTC时间差的分钟数。例如，美国东部标准时间返回300.在某地进入夏令时的情况下，这个值会有所变化|
   - (4) RegExp类型
+    - ECMAScript通过RegExp类型来支持正则表达式
+    - 创建正则表达式
+    ```
+    var expression = / pattern / flags
+    pattern(模式):可以是任何简单或复杂的正则表达式，包含字符类、限定符、分组、向前查找以及反向引用
+    flags(标志):用以标明正则表达式的行为
+    ```
