@@ -32,5 +32,5 @@
       - [1] 继承的方法 -> toLocaleString()、toString()、valueOf()
       - [2] 日期格式化方法 -> toDateString()、toTimeString()、toLocaleDateString()、toLocaleTimeString()、toUTCString()
       - [3] 日期/时间组件方法 -> 33个
-  - (4) RegExp()类型
+  - (4) RegExp类型
   
