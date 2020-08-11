@@ -515,6 +515,7 @@
   - (4) RegExp类型
     - ECMAScript通过RegExp类型来支持正则表达式
     - [1] 创建正则表达式
+      - 字面量形式定义的正则表达式：
       ```
       var expression = / pattern / flags
 
