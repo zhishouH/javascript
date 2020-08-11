@@ -320,3 +320,5 @@
 // console.log(now.setFullYear(2020))
 
 // RegExp类型
+var pattern1 = / at /g
+console.log(pattern1)
