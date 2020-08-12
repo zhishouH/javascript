@@ -320,5 +320,10 @@
 // console.log(now.setFullYear(2020))
 
 // RegExp类型
-var pattern1 = / at /g
-console.log(pattern1)
+// RegExp实例属性
+var pattern1 = /\[bc\]at/i
+console.log(pattern1.global) // false
+console.log(pattern1.ignoreCase) // true
+console.log(pattern1.multiline) // false
+console.log(pattern1.lastIndex) // 0
+console.log(pattern1.source) // \[bc\]at
