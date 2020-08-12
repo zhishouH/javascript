@@ -33,4 +33,5 @@
       - [2] 日期格式化方法 -> toDateString()、toTimeString()、toLocaleDateString()、toLocaleTimeString()、toUTCString()
       - [3] 日期/时间组件方法 -> 33个
   - (4) RegExp类型
-  
+    - 字面量形式创建正则表达式
+    - 使用RegExp构造函数创建正则表达式
