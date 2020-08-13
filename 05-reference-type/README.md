@@ -580,3 +580,11 @@
         - lastIndex: 整数，表示开始搜索下一个匹配项的字符位置，从0算起
         - multiline: 布尔值，表示是否设置了m标志
         - source: 正则表达式的字符串表示，按照字面量形式而非传入构造函数中的字符串模式返回
+      ```
+      var pattern1 = /\[bc\]at/i
+      console.log(pattern1.global) // false
+      console.log(pattern1.ignoreCase) // true
+      console.log(pattern1.multiline) // false
+      console.log(pattern1.lastIndex) // 0
+      console.log(pattern1.source) // \[bc\]at
+      ```
