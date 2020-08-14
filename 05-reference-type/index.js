@@ -328,9 +328,20 @@
 // console.log(pattern1.lastIndex) // 0
 // console.log(pattern1.source) // \[bc\]at
 
-var pattern2 = new RegExp('\\[bc\\]at', 'i')
-console.log(pattern2.global) // false
-console.log(pattern2.ignoreCase) // true
-console.log(pattern2.multiline) // false
-console.log(pattern2.lastIndex) // 0
-console.log(pattern2.source) // \[bc\]at
+// var pattern2 = new RegExp('\\[bc\\]at', 'i')
+// console.log(pattern2.global) // false
+// console.log(pattern2.ignoreCase) // true
+// console.log(pattern2.multiline) // false
+// console.log(pattern2.lastIndex) // 0
+// console.log(pattern2.source) // \[bc\]at
+
+// RegExp实例方法
+var text = 'mom and dad and baby'
+var pattern1 = /mom( and dad( and baby)?)?/gi
+
+var matches = pattern1.exec(text)
+console.log(matches.index) // 0
+console.log(matches.input) // mom and dad and baby
+console.log(matches[0]) // mom and dad and baby
+console.log(matches[1]) // and dad and baby
+console.log(matches[2]) //  and baby
