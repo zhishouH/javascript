@@ -596,3 +596,4 @@
       console.log(pattern2.lastIndex) // 0
       console.log(pattern2.source) // \[bc\]at
       ```
+    - [4] RegExp实例方法
