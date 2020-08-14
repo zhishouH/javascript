@@ -320,13 +320,17 @@
 // console.log(now.setFullYear(2020))
 
 // RegExp类型
-// RegExp实例属性
-var pattern1 = /\[bc\]at/i
-console.log(pattern1.global) // false
-console.log(pattern1.ignoreCase) // true
-console.log(pattern1.multiline) // false
-console.log(pattern1.lastIndex) // 0
-console.log(pattern1.source) // \[bc\]at
+// // RegExp实例属性
+// var pattern1 = /\[bc\]at/i
+// console.log(pattern1.global) // false
+// console.log(pattern1.ignoreCase) // true
+// console.log(pattern1.multiline) // false
+// console.log(pattern1.lastIndex) // 0
+// console.log(pattern1.source) // \[bc\]at
 
 var pattern2 = new RegExp('\\[bc\\]at', 'i')
-console.log(pattern2.global)
+console.log(pattern2.global) // false
+console.log(pattern2.ignoreCase) // true
+console.log(pattern2.multiline) // false
+console.log(pattern2.lastIndex) // 0
+console.log(pattern2.source) // \[bc\]at
