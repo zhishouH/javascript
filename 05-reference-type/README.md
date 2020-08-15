@@ -597,3 +597,4 @@
       console.log(pattern2.source) // \[bc\]at
       ```
     - [4] RegExp实例方法
+      
