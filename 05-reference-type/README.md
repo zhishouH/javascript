@@ -598,7 +598,7 @@
       ```
     - [4] RegExp实例方法
       - exec()方法:
-        - 接收一个参数：应用模式的字符串
+        - 接受一个参数：应用模式的字符串
         - 返回包含第一个匹配项信息的数组
         - 包含两个额外属性：index表示匹配项在字符串中的位置；input表示应用正则表达式的字符串
         - 在数组中，第一项是与整个模式匹配的字符串，其他项是与模式中的捕获组匹配的字符串
@@ -614,28 +614,45 @@
       console.log(matches[2]) //  and baby
       ```
       ```
-      在设置了全局标志下，每次调用exec()都会在字符串中继续查找新匹配项
+      在设置了全局标志下，每次调用exec()都会在字符串中继续查找新匹配项:
       var text = 'cat, bat, sat, fat'
+      
       var pattern1 = /.at/
-
       var matches = pattern1.exec(text)
+      
       console.log(matches.index) // 0
       console.log(matches[0]) // cat
       console.log(pattern1.lastIndex) // 0
 
       matches = pattern1.exec(text)
+      
       console.log(matches.index) // 0
       console.log(matches[0]) // cat
       console.log(pattern1.lastIndex) // 0
 
       var pattern2 = /.at/g
       matches = pattern2.exec(text)
+      
       console.log(matches.index) // 0
       console.log(matches[0]) // cat
       console.log(pattern2.lastIndex) // 3
 
       matches = pattern2.exec(text)
+      
       console.log(matches.index) // 5
       console.log(matches[0]) // bat
       console.log(pattern2.lastIndex) // 8
+      此例中的第一个模式pattern1未设置全局模式，因此每次调用exec()时返回的是第一个匹配项
+      而第二个模式pattern2是全局模式，因此每次调用都会返回字符串中的下一个匹配项
+      ```
+      - test()方法:
+        - 接受一个字符串参数
+        - 在模式与该参数匹配的情况下返回true，反之false
+      ```
+      var text = '000-00-0000'
+      var pattern = /\d{3}-\d{2}-\d{4}/
+
+      if (pattern.test(text)) {
+      console.log('The pattern was matched.')
+      }
       ```
