@@ -35,3 +35,14 @@
   - (4) RegExp类型
     - 字面量形式创建正则表达式
     - 使用RegExp构造函数创建正则表达式
+    - RegExps实例属性
+      - global
+      - ignoreCase
+      - lastIndex
+      - multiline
+      - source
+    - RegExp实例方法
+      - exec()
+      - test()
+      - toLocaleString()
+      - toString()
