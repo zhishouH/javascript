@@ -336,6 +336,7 @@
 // console.log(pattern2.source) // \[bc\]at
 
 // RegExp实例方法
+// exec()方法
 // var text = 'mom and dad and baby'
 // var pattern1 = /mom( and dad( and baby)?)?/gi
 
@@ -346,26 +347,34 @@
 // console.log(matches[1]) // and dad and baby
 // console.log(matches[2]) //  and baby
 
-var text = 'cat, bat, sat, fat'
-var pattern1 = /.at/
+// var text = 'cat, bat, sat, fat'
+// var pattern1 = /.at/
 
-var matches = pattern1.exec(text)
-console.log(matches.index) // 0
-console.log(matches[0]) // cat
-console.log(pattern1.lastIndex) // 0
+// var matches = pattern1.exec(text)
+// console.log(matches.index) // 0
+// console.log(matches[0]) // cat
+// console.log(pattern1.lastIndex) // 0
 
-matches = pattern1.exec(text)
-console.log(matches.index) // 0
-console.log(matches[0]) // cat
-console.log(pattern1.lastIndex) // 0
+// matches = pattern1.exec(text)
+// console.log(matches.index) // 0
+// console.log(matches[0]) // cat
+// console.log(pattern1.lastIndex) // 0
 
-var pattern2 = /.at/g
-matches = pattern2.exec(text)
-console.log(matches.index) // 0
-console.log(matches[0]) // cat
-console.log(pattern2.lastIndex) // 3
+// var pattern2 = /.at/g
+// matches = pattern2.exec(text)
+// console.log(matches.index) // 0
+// console.log(matches[0]) // cat
+// console.log(pattern2.lastIndex) // 3
 
-matches = pattern2.exec(text)
-console.log(matches.index) // 5
-console.log(matches[0]) // bat
-console.log(pattern2.lastIndex) // 8
+// matches = pattern2.exec(text)
+// console.log(matches.index) // 5
+// console.log(matches[0]) // bat
+// console.log(pattern2.lastIndex) // 8
+
+// test()方法
+var text = '000-00-0000'
+var pattern = /\d{3}-\d{2}-\d{4}/
+
+if (pattern.test(text)) {
+  console.log('The pattern was matched.')
+}
