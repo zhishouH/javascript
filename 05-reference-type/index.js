@@ -372,9 +372,14 @@
 // console.log(pattern2.lastIndex) // 8
 
 // test()方法
-var text = '000-00-0000'
-var pattern = /\d{3}-\d{2}-\d{4}/
+// var text = '000-00-0000'
+// var pattern = /\d{3}-\d{2}-\d{4}/
 
-if (pattern.test(text)) {
-  console.log('The pattern was matched.')
-}
+// if (pattern.test(text)) {
+//   console.log('The pattern was matched.')
+// }
+// The pattern was matched.
+// toLocaleString()、toString()
+var pattern = new RegExp('\\[bc\\]at', 'gi')
+console.log(pattern.toString()) // /\[bc\]at/gi
+console.log(pattern.toLocaleString()) // /\[bc\]at/gi
