@@ -597,4 +597,19 @@
       console.log(pattern2.source) // \[bc\]at
       ```
     - [4] RegExp实例方法
-      
+      - exec()方法:
+        - 接收一个参数：应用模式的字符串
+        - 返回包含第一个匹配项信息的数组
+        - 包含两个额外属性：index表示匹配项在字符串中的位置；input表示应用正则表达式的字符串
+        - 在数组中，第一项是与整个模式匹配的字符串，其他项是与模式中的捕获组匹配的字符串
+      ```
+      var text = 'mom and dad and baby'
+      var pattern1 = /mom( and dad( and baby)?)?/gi
+
+      var matches = pattern1.exec(text)
+      console.log(matches.index) // 0
+      console.log(matches.input) // mom and dad and baby
+      console.log(matches[0]) // mom and dad and baby
+      console.log(matches[1]) // and dad and baby
+      console.log(matches[2]) //  and baby
+       ```
