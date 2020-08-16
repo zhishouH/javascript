@@ -664,3 +664,14 @@
       console.log(pattern.toString()) // /\[bc\]at/gi
       console.log(pattern.toLocaleString()) // /\[bc\]at/gi
       ```
+    - [5] RegExp构造函数属性
+
+      |长属性名|短属性名|说明|
+      |:--|:--|:--|
+      |input|$_|最近一次要匹配的字符串。Opera未实现此属性|
+      |lastMatch|$&|最近一次匹配项。Opera未实现此属性|
+      |lastParen|$+|最近一次匹配的捕获组。Opera未实现此属性|
+      |leftContext|$`|input字符串中lastMatch之前的文本|
+      |multiline|$*|布尔值，表示是否所有表达式都使用多行模式。IE和Opera未实现此属性|
+      |rightContext|$'|input字符串中lastMatch之后的文本|
+
