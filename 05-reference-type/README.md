@@ -612,4 +612,30 @@
       console.log(matches[0]) // mom and dad and baby
       console.log(matches[1]) // and dad and baby
       console.log(matches[2]) //  and baby
-       ```
+      ```
+      ```
+      在设置了全局标志下，每次调用exec()都会在字符串中继续查找新匹配项
+      var text = 'cat, bat, sat, fat'
+      var pattern1 = /.at/
+
+      var matches = pattern1.exec(text)
+      console.log(matches.index) // 0
+      console.log(matches[0]) // cat
+      console.log(pattern1.lastIndex) // 0
+
+      matches = pattern1.exec(text)
+      console.log(matches.index) // 0
+      console.log(matches[0]) // cat
+      console.log(pattern1.lastIndex) // 0
+
+      var pattern2 = /.at/g
+      matches = pattern2.exec(text)
+      console.log(matches.index) // 0
+      console.log(matches[0]) // cat
+      console.log(pattern2.lastIndex) // 3
+
+      matches = pattern2.exec(text)
+      console.log(matches.index) // 5
+      console.log(matches[0]) // bat
+      console.log(pattern2.lastIndex) // 8
+      ```
