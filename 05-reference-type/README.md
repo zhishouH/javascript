@@ -653,6 +653,14 @@
       var pattern = /\d{3}-\d{2}-\d{4}/
 
       if (pattern.test(text)) {
-      console.log('The pattern was matched.')
+      console.log('The pattern was matched.') 
+      // The pattern was matched.
       }
+      ```
+      - toLocaleString()
+      - toString()
+      ```
+      var pattern = new RegExp('\\[bc\\]at', 'gi')
+      console.log(pattern.toString()) // /\[bc\]at/gi
+      console.log(pattern.toLocaleString()) // /\[bc\]at/gi
       ```
