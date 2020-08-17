@@ -674,4 +674,17 @@
       |leftContext|$`|input字符串中lastMatch之前的文本|
       |multiline|$*|布尔值，表示是否所有表达式都使用多行模式。IE和Opera未实现此属性|
       |rightContext|$'|input字符串中lastMatch之后的文本|
+      
+      ```
+      var text = 'this has been a short summer'
+      var pattern = /(.)hort/g
 
+      if (pattern.test(text)) {
+      console.log(RegExp.input)
+      console.log(RegExp.leftContext)
+      console.log(RegExp.rightContext)
+      console.log(RegExp.lastMatch)
+      console.log(RegExp.lastParen)
+      console.log(RegExp.multiline)
+      }
+      ```
