@@ -384,3 +384,16 @@
 // var pattern = new RegExp('\\[bc\\]at', 'gi')
 // console.log(pattern.toString()) // /\[bc\]at/gi
 // console.log(pattern.toLocaleString()) // /\[bc\]at/gi
+
+// RegExp()构造函数属性
+var text = 'this has been a short summer'
+var pattern = /(.)hort/g
+
+if (pattern.test(text)) {
+  console.log(RegExp.input)
+  console.log(RegExp.leftContext)
+  console.log(RegExp.rightContext)
+  console.log(RegExp.lastMatch)
+  console.log(RegExp.lastParen)
+  console.log(RegExp.multiline)
+}
