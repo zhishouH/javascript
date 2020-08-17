@@ -378,7 +378,7 @@
 // if (pattern.test(text)) {
 //   console.log('The pattern was matched.')
 // }
-// The pattern was <matched className=""></matched>
+// The pattern was matched
 
 // toLocaleString()、toString()
 // var pattern = new RegExp('\\[bc\\]at', 'gi')
