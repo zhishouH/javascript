@@ -424,29 +424,29 @@
       - 日期和时间都基于本地时区而非GMT来创建
     - [3] Date.now()
       - 返回表示调用这个方法时的日期和时间的毫秒数
-      ```
-      // 取得开始时间
-      var start = Date.now()
+    ```
+    // 取得开始时间
+    var start = Date.now()
 
-      // 调用函数
-      doSomething()
+    // 调用函数
+    doSomething()
 
-      // 取得停止时间
-      // var stop = Date.now(),
-             result = stop - start
-      ```
+    // 取得停止时间
+    // var stop = Date.now(),
+            result = stop - start
+    ```
       - 在不支持Date.now()的浏览器中，使用+操作符获取对象的时间戳也可以达到同样的目的
-      ```
-      // 取得开始时间
-      var start = +new Date()
+    ```
+    // 取得开始时间
+    var start = +new Date()
 
-      // 调用函数
-      doSomething()
+    // 调用函数
+    doSomething()
 
-      // 取得停止时间
-      var stop = +new Date()
-          result = stop - start
-      ```
+    // 取得停止时间
+    var stop = +new Date()
+        result = stop - start
+    ```
   - (3) Date类型中的语法：
     - [1] 继承的方法
       - toLocaleString():按照与浏览器设置的地区相适应的格式返回日期和时间
@@ -467,15 +467,15 @@
       - toLocaleDateString():以特定于地区的格式显示星期几、月、日和年
       - toLocaleTimeString():以特定于地区的格式显示时、分、秒
       - toUTCString():以特定于实现的格式显示UTC日期
-      ```
-      var now = new Date(2020, 7, 6, 15, 48, 48)
-      console.log(now) // Thu Aug 06 2020 15:48:48 GMT+0800 (中国标准时间)
-      console.log(now.toDateString()) // Thu Aug 06 2020
-      console.log(now.toTimeString()) // 15:48:48 GMT+0800 (中国标准时间)
-      console.log(now.toLocaleDateString()) // 2020/8/6
-      console.log(now.toLocaleTimeString()) // 下午3:48:48
-      console.log(now.toUTCString()) // Thu, 06 Aug 2020 07:48:48 GMT
-      ```
+    ```
+    var now = new Date(2020, 7, 6, 15, 48, 48)
+    console.log(now) // Thu Aug 06 2020 15:48:48 GMT+0800 (中国标准时间)
+    console.log(now.toDateString()) // Thu Aug 06 2020
+    console.log(now.toTimeString()) // 15:48:48 GMT+0800 (中国标准时间)
+    console.log(now.toLocaleDateString()) // 2020/8/6
+    console.log(now.toLocaleTimeString()) // 下午3:48:48
+    console.log(now.toUTCString()) // Thu, 06 Aug 2020 07:48:48 GMT
+    ```
     - [3] 日期/时间组件方法
       |序号|方法|说明|
       |:--:|:--|:--|
