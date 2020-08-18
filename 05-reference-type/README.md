@@ -408,19 +408,19 @@
       - Date.UTC()-接收年份、基于0的月份(一月是0，二月是1，以此类推)、月中的哪一天(1到31)、小时数(0到23)、分钟、秒以及毫秒数。
       - 在这些参数中，只有前两个参数(年和月)是必需的
       - 如果没有提供月中的天数，则假设天数为1；如果省略其他参数，则统统假设为0
-      ```
-      var y2k = new Date(Date.UTC(2000, 0))
-      console.log(y2k) // Sat Jan 01 2000 08:00:00 GMT+0800 (中国标准时间)
+    ```
+    var y2k = new Date(Date.UTC(2000, 0))
+    console.log(y2k) // Sat Jan 01 2000 08:00:00 GMT+0800 (中国标准时间)
 
-      var allFivees = new Date(Date.UTC(2005, 4, 5, 17, 55, 55))
-      console.log(allFivees) // Fri May 06 2005 01:55:55 GMT+0800 (中国标准时间)
+    var allFivees = new Date(Date.UTC(2005, 4, 5, 17, 55, 55))
+    console.log(allFivees) // Fri May 06 2005 01:55:55 GMT+0800 (中国标准时间)
 
-      var y2k2 = new Date(2000, 0)
-      console.log(y2k2) // Sat Jan 01 2000 00:00:00 GMT+0800 (中国标准时间)
+    var y2k2 = new Date(2000, 0)
+    console.log(y2k2) // Sat Jan 01 2000 00:00:00 GMT+0800 (中国标准时间)
 
-      var allFivees2 = new Date(2005, 4, 5, 17, 55, 55)
-      console.log(allFivees2) // Thu May 05 2005 17:55:55 GMT+0800 (中国标准时间)
-      ```
+    var allFivees2 = new Date(2005, 4, 5, 17, 55, 55)
+    console.log(allFivees2) // Thu May 05 2005 17:55:55 GMT+0800 (中国标准时间)
+    ```
       - 日期和时间都基于本地时区而非GMT来创建
     - [3] Date.now()
       - 返回表示调用这个方法时的日期和时间的毫秒数
