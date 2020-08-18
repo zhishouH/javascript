@@ -9,6 +9,7 @@
   person.name = 'zhishouh'
   person.age = 19
   ```
+  
     - [2] 对象字面量表示法
   ```
   var person = {
