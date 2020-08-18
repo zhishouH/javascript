@@ -701,3 +701,15 @@
       console.log(RegExp['$*']) // false
       }
       ```
+      ```
+      用于存储捕获组的构造函数属性
+      访问这些属性的语法是RegExp.$1、RegExp.$2、... RegExp.$9
+      分别用于存储第一、第二...第九个匹配的捕获组
+      var text = 'this has been a short summer'
+      var pattern = /(..)or(.)/g
+
+      if (pattern.test(text)) {
+      console.log(RegExp.$1) // sh
+      console.log(RegExp.$2) // t
+      }
+      ```
