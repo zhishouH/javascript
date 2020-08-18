@@ -398,14 +398,22 @@
 //   console.log(RegExp.multiline)
 // }
 
+// var text = 'this has been a short summer'
+// var pattern = /(.)hort/g
+
+// if (pattern.test(text)) {
+//   console.log(RegExp.$_) // this has been a short summer
+//   console.log(RegExp['$`']) // this has been a
+//   console.log(RegExp["$'"]) //  summer
+//   console.log(RegExp['$&']) // short
+//   console.log(RegExp['$+']) // s
+//   console.log(RegExp['$*']) // false
+// }
+
 var text = 'this has been a short summer'
-var pattern = /(.)hort/g
+var pattern = /(..)or(.)/g
 
 if (pattern.test(text)) {
-  console.log(RegExp.$_) // this has been a short summer
-  console.log(RegExp['$`']) // this has been a
-  console.log(RegExp["$'"]) //  summer
-  console.log(RegExp['$&']) // short
-  console.log(RegExp['$+']) // s
-  console.log(RegExp['$*']) // false
+  console.log(RegExp.$1)
+  console.log(RegExp.$2)
 }
