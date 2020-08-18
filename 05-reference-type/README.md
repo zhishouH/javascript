@@ -4,11 +4,11 @@
 - 1、Object类型
   - (1) 创建Object实例的方法
     - [1] 使用new操作符后跟Object构造函数  // 不推荐
-    ```
-    var person = new Object()
-    person.name = 'zhishouh'
-    person.age = 19
-    ```
+  ```
+  var person = new Object()
+  person.name = 'zhishouh'
+  person.age = 19
+  ```
     - [2] 对象字面量表示法
     ```
     var person = {
