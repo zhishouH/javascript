@@ -10,12 +10,12 @@
   person.age = 19
   ```
     - [2] 对象字面量表示法
-    ```
-    var person = {
-      name: 'zhishouh',  //对象属性直接逗号分隔
-      age: 19
-    }
-    ```
+  ```
+  var person = {
+    name: 'zhishouh',  //对象属性直接逗号分隔
+    age: 19
+  }
+  ```
   - (2) 对象字面量也可以向函数传递大量可选参数
     ```
     function displayInfo(args) {
