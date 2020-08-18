@@ -513,9 +513,10 @@
       |32|setUTCMilliseconds(毫秒)|设置UTC日期中的毫秒数|
       |33|getTimezoneOffset()|返回本地时间与UTC时间差的分钟数。例如，美国东部标准时间返回300.在某地进入夏令时的情况下，这个值会有所变化|
 
-- 4 RegExp类型
+- 4、RegExp类型
     - ECMAScript通过RegExp类型来支持正则表达式
-    - (1) 字面量形式创建正则表达式
+    - (1) 创建正则表达式
+      - [1]字面量形式创建正则表达式
       ```
       var expression = / pattern / flags
 
@@ -551,7 +552,7 @@
       <!-- 匹配所有".at"，不区分大小写 -->
       var pattern4 = /\.at/gi
       ```
-    - (2) 使用RegExp构造函数创建正则表达式
+      - [2] 使用RegExp构造函数创建正则表达式
       - 接收两个参数：
         - 要匹配的字符串模式
         - 可选的标志字符串
@@ -574,7 +575,7 @@
 
         /w\\hello\\123/   ->    "\\w\\\\hello\\\\123"
       ```
-    - (3) RegExps实例属性
+    - (2) RegExps实例属性
       - RegExp的每个实例都具有一下属性：
         - global: 布尔值，表示是否设置了g标志
         - ignoreCase: 布尔值，表示是否设置了i标志
@@ -597,7 +598,7 @@
       console.log(pattern2.lastIndex) // 0
       console.log(pattern2.source) // \[bc\]at
       ```
-    - (4) RegExp实例方法
+    - (3) RegExp实例方法
       - exec()方法:
         - 接受一个参数：应用模式的字符串
         - 返回包含第一个匹配项信息的数组
@@ -665,7 +666,7 @@
       console.log(pattern.toString()) // /\[bc\]at/gi
       console.log(pattern.toLocaleString()) // /\[bc\]at/gi
       ```
-    - (5) RegExp构造函数属性
+    - (4) RegExp构造函数属性
 
       |长属性名|短属性名|说明|
       |:--|:--|:--|
@@ -714,7 +715,7 @@
       console.log(RegExp.$2) // t
       }
       ```
-    - (6) 模式的局限性
+    - (5) 模式的局限性
       - ECMAScript正则表达式不支持的特性：
         - 匹配字符串开始和结尾的\A和\Z锚
         - 先后查找(lookbehind)
