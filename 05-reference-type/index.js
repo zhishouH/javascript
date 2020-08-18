@@ -386,14 +386,26 @@
 // console.log(pattern.toLocaleString()) // /\[bc\]at/gi
 
 // RegExp()构造函数属性
+// var text = 'this has been a short summer'
+// var pattern = /(.)hort/g
+
+// if (pattern.test(text)) {
+//   console.log(RegExp.input)
+//   console.log(RegExp.leftContext)
+//   console.log(RegExp.rightContext)
+//   console.log(RegExp.lastMatch)
+//   console.log(RegExp.lastParen)
+//   console.log(RegExp.multiline)
+// }
+
 var text = 'this has been a short summer'
 var pattern = /(.)hort/g
 
 if (pattern.test(text)) {
-  // console.log(RegExp.input)
-  // console.log(RegExp.leftContext)
-  // console.log(RegExp.rightContext)
-  // console.log(RegExp.lastMatch)
-  // console.log(RegExp.lastParen)
-  console.log(pattern.multiline)
+  console.log(RegExp.$_) // this has been a short summer
+  console.log(RegExp['$`']) // this has been a
+  console.log(RegExp["$'"]) //  summer
+  console.log(RegExp['$&']) // short
+  console.log(RegExp['$+']) // s
+  console.log(RegExp['$*']) // false
 }
