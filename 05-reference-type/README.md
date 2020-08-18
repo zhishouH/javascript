@@ -713,3 +713,14 @@
       console.log(RegExp.$2) // t
       }
       ```
+    - [6] 模式的局限性
+      - ECMAScript正则表达式不支持的特性：
+        - 匹配字符串开始和结尾的\A和\Z锚
+        - 先后查找(lookbehind)
+        - 并集和交集类
+        - 原子组(atomic grouping)
+        - Unicode支持(单个字符除外，如\uFFFF)
+        - 命名的捕获组
+        - s (single,单行) 和 x (free-spacing,无间隔)匹配模式
+        - 条件匹配
+        - 正则表达式注释
