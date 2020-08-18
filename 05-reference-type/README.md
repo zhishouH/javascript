@@ -4,19 +4,18 @@
 - 1、Object类型
   - (1) 创建Object实例的方法
     - [1] 使用new操作符后跟Object构造函数  // 不推荐
-  ```
-  var person = new Object()
-  person.name = 'zhishouh'
-  person.age = 19
-  ```
-  
+    ```
+    var person = new Object()
+    person.name = 'zhishouh'
+    person.age = 19
+    ```
     - [2] 对象字面量表示法
-  ```
-  var person = {
-    name: 'zhishouh',  //对象属性直接逗号分隔
-    age: 19
-  }
-  ```
+    ```
+    var person = {
+      name: 'zhishouh',  //对象属性直接逗号分隔
+      age: 19
+    }
+    ```
   - (2) 对象字面量也可以向函数传递大量可选参数
     ```
     function displayInfo(args) {
