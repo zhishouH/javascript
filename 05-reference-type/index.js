@@ -417,3 +417,15 @@
 //   console.log(RegExp.$1) // sh
 //   console.log(RegExp.$2) // t
 // }
+
+// function类型
+// function sum (sum1, sum2) {
+//   return sum1 + sum2
+// }
+// var result = sum(1, 2)
+// console.log(result)
+
+var sum = function (sum1, sum2) {
+  return sum1 + sum2
+}
+console.log(sum(1, 2))
