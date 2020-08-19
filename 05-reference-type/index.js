@@ -425,7 +425,7 @@
 // var result = sum(1, 2)
 // console.log(result)
 
-var sum = function (sum1, sum2) {
-  return sum1 + sum2
-}
-console.log(sum(1, 2))
+// var sum = function (sum1, sum2) {
+//   return sum1 + sum2
+// }
+// console.log(sum(1, 2))
