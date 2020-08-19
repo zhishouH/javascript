@@ -419,13 +419,16 @@
 // }
 
 // function类型
-// function sum (sum1, sum2) {
-//   return sum1 + sum2
+// function sum (num1, num2) {
+//   return num1 + num2
 // }
 // var result = sum(1, 2)
 // console.log(result)
 
-// var sum = function (sum1, sum2) {
-//   return sum1 + sum2
+// var sum = function (num1, num2) {
+//   return num1 + num2
 // }
 // console.log(sum(1, 2))
+
+var sum = new Function('num1', 'num2', 'return num1 + num2')
+console.log(sum(1, 2))
