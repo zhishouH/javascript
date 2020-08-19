@@ -430,5 +430,15 @@
 // }
 // console.log(sum(1, 2))
 
-var sum = new Function('num1', 'num2', 'return num1 + num2')
-console.log(sum(1, 2))
+// var sum = new Function('num1', 'num2', 'return num1 + num2')
+// console.log(sum(1, 2))
+
+// 没有重载
+function addSomeNumber (num) {
+  return num + 100
+}
+function addSomeNumber (num) {
+  return num + 200
+}
+var result = addSomeNumber(100)
+console.log(result) // 300
