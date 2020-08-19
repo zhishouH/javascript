@@ -727,4 +727,19 @@
         - s (single,单行) 和 x (free-spacing,无间隔)匹配模式
         - 条件匹配
         - 正则表达式注释
+        
 - 5、function类型
+  - 定义函数的方式
+  ```
+  function sum (sum1, sum2) {
+    return sum1 + sum2
+  }
+  var result = sum(1, 2)
+  console.log(result)  // 3
+  ```
+  ```
+  var sum = function (sum1, sum2) {
+  return sum1 + sum2
+  }
+  console.log(sum(1, 2))
+  ```
