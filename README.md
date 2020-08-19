@@ -46,3 +46,5 @@
       - test()
       - toLocaleString()
       - toString()
+    - RegExp构造函数属性
+    - 模式的局限性
