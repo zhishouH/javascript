@@ -731,15 +731,20 @@
 - 5、function类型
   - 定义函数的方式
   ```
-  function sum (sum1, sum2) {
-    return sum1 + sum2
+  function sum (num1, num2) {
+    return num1 + num2
   }
   var result = sum(1, 2)
   console.log(result)  // 3
   ```
   ```
-  var sum = function (sum1, sum2) {
-  return sum1 + sum2
+  var sum = function (num1, num2) {
+  return num1 + num2
   }
   console.log(sum(1, 2))
+  ```
+  ```
+  使用Function构造函数定义函数：
+  var sum = new Function('num1', 'num2', 'return num1 + num2')
+  console.log(sum(1, 2))  // 3
   ```
