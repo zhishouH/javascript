@@ -729,7 +729,7 @@
         - 正则表达式注释
         
 - 5、function类型
-  - 定义函数的方式
+  - (1) 定义函数的方式
   ```
   function sum (num1, num2) {
     return num1 + num2
@@ -744,7 +744,19 @@
   console.log(sum(1, 2))
   ```
   ```
-  使用Function构造函数定义函数：
+  使用Function构造函数定义函数:(不推荐)
   var sum = new Function('num1', 'num2', 'return num1 + num2')
   console.log(sum(1, 2))  // 3
+  ```
+  - (2) 没有重载(深入理解)
+  ```
+  function addSomeNumber (num) {
+  return num + 100
+  }
+  function addSomeNumber (num) {
+  return num + 200
+  }
+  var result = addSomeNumber(100)
+  console.log(result) // 300
+  声明了两个同名函数，而结果是后面的函数覆盖了前面的函数
   ```
