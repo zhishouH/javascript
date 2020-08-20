@@ -434,11 +434,11 @@
 // console.log(sum(1, 2))
 
 // 没有重载
-function addSomeNumber (num) {
-  return num + 100
-}
-function addSomeNumber (num) {
-  return num + 200
-}
-var result = addSomeNumber(100)
-console.log(result) // 300
+// function addSomeNumber (num) {
+//   return num + 100
+// }
+// function addSomeNumber (num) {
+//   return num + 200
+// }
+// var result = addSomeNumber(100)
+// console.log(result) // 300
