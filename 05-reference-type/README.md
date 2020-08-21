@@ -748,6 +748,7 @@
   var sum = new Function('num1', 'num2', 'return num1 + num2')
   console.log(sum(1, 2))  // 3
   ```
+
   - (2) 没有重载(深入理解)
   ```
   function addSomeNumber (num) {
@@ -760,3 +761,6 @@
   console.log(result) // 300
   声明了两个同名函数，而结果是后面的函数覆盖了前面的函数
   ```
+
+  - (3) 函数声明与函数表达式
+   
