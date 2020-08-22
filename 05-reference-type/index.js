@@ -442,3 +442,8 @@
 // }
 // var result = addSomeNumber(100)
 // console.log(result) // 300
+
+console.log(sum(1, 2))
+function sum (num1, num2) {
+  return num1 + num2
+}
