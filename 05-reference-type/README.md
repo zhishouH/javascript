@@ -777,7 +777,7 @@
   function callSomeFuction (SomeFuction, somArgument) {
     return SomeFuction(somArgument)
   }
-
+  <!-- 第一个参数是一个函数，第二个参数是传递给该函数的一个值 -->
   function add10 (num) {
     return num + 10
   }
