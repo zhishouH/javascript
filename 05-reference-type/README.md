@@ -763,4 +763,10 @@
   ```
 
   - (3) 函数声明与函数表达式
-   
+  ```
+  console.log(sum(1, 2))
+  function sum (num1, num2) {
+  return num1 + num2
+  }
+  // 3
+  ```
