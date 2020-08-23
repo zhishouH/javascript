@@ -772,12 +772,12 @@
   解析器会率先读取函数声明
   ```
 
-  - (4) 作为值得函数
+  - (4) 作为值的函数
   ```
   function callSomeFuction (SomeFuction, somArgument) {
     return SomeFuction(somArgument)
   }
-  
+
   <!-- 第一个参数是一个函数，第二个参数是传递给该函数的一个值 -->
 
   function add10 (num) {
