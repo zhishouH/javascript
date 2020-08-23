@@ -444,7 +444,24 @@
 // console.log(result) // 300
 
 // 函数声明和函数表达式
-console.log(sum(1, 2))
-function sum (num1, num2) {
-  return num1 + num2
+// console.log(sum(1, 2))
+// function sum (num1, num2) {
+//   return num1 + num2
+// }
+
+// 作为值得函数
+function callSomeFuction (SomeFuction, somArgument) {
+  return SomeFuction(somArgument)
 }
+function add10 (num) {
+  return num + 10
+}
+var result1 = callSomeFuction(add10, 10)
+console.log(result1) // 20
+
+function getGreeting (name) {
+  return 'Hello, ' + name
+}
+
+var result2 = callSomeFuction(getGreeting, 'zhishouh')
+console.log(result2) // Hello, zhishouh
