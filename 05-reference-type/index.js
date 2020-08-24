@@ -450,18 +450,37 @@
 // }
 
 // 作为值得函数
-function callSomeFuction (SomeFuction, somArgument) {
-  return SomeFuction(somArgument)
-}
-function add10 (num) {
-  return num + 10
-}
-var result1 = callSomeFuction(add10, 10)
-console.log(result1) // 20
+// function callSomeFuction (SomeFuction, somArgument) {
+//   return SomeFuction(somArgument)
+// }
+// function add10 (num) {
+//   return num + 10
+// }
+// var result1 = callSomeFuction(add10, 10)
+// console.log(result1) // 20
 
-function getGreeting (name) {
-  return 'Hello, ' + name
-}
+// function getGreeting (name) {
+//   return 'Hello, ' + name
+// }
 
-var result2 = callSomeFuction(getGreeting, 'zhishouh')
-console.log(result2) // Hello, zhishouh
+// var result2 = callSomeFuction(getGreeting, 'zhishouh')
+// console.log(result2) // Hello, zhishouh
+
+function createComparisonFunction (propertyName) {
+  return function (object1, object2) {
+    var value1 = object1[propertyName]
+    var value2 = object2[propertyName]
+    if (value1 < value2) {
+      return -1
+    } else if (value1 > value2) {
+      return 1
+    } else {
+      return 0
+    }
+  }
+}
+var data = [{ name: 'zhishouh', age: 19 }, { name: 'pepsi', age: 20 }]
+data.sort(createComparisonFunction('name'))
+console.log(data[0].name)
+data.sort(createComparisonFunction('age'))
+console.log(data[0].name)
