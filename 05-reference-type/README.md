@@ -812,5 +812,5 @@
   console.log(data[0].name)
   data.sort(createComparisonFunction('age'))
   console.log(data[0].name)
-
   ```
+- (5) 函数内部属性
