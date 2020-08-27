@@ -810,8 +810,8 @@
   }
   var data = [{ name: 'zhishouh', age: 19 }, { name: 'pepsi', age: 20 }]
   data.sort(createComparisonFunction('name'))
-  console.log(data[0].name)
+  console.log(data[0].name)  // pepsi
   data.sort(createComparisonFunction('age'))
-  console.log(data[0].name)
+  console.log(data[0].name)  // zhishouh
   ```
 - (5) 函数内部属性
