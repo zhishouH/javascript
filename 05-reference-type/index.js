@@ -481,6 +481,6 @@ function createComparisonFunction (propertyName) {
 }
 var data = [{ name: 'zhishouh', age: 19 }, { name: 'pepsi', age: 20 }]
 data.sort(createComparisonFunction('name'))
-console.log(data[0].name)
+console.log(data[0].name) // pepsi
 data.sort(createComparisonFunction('age'))
-console.log(data[0].name)
+console.log(data[0].name) // zhishouh
