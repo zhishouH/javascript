@@ -794,6 +794,7 @@
   console.log(result2) // Hello, zhishouh
   ```
   ```
+  从一个函数中返回另一个函数
   function createComparisonFunction (propertyName) {
     return function (object1, object2) {
       var value1 = object1[propertyName]
