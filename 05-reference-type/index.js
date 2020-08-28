@@ -466,21 +466,29 @@
 // var result2 = callSomeFuction(getGreeting, 'zhishouh')
 // console.log(result2) // Hello, zhishouh
 
-function createComparisonFunction (propertyName) {
-  return function (object1, object2) {
-    var value1 = object1[propertyName]
-    var value2 = object2[propertyName]
-    if (value1 < value2) {
-      return -1
-    } else if (value1 > value2) {
-      return 1
-    } else {
-      return 0
-    }
+// function createComparisonFunction (propertyName) {
+//   return function (object1, object2) {
+//     var value1 = object1[propertyName]
+//     var value2 = object2[propertyName]
+//     if (value1 < value2) {
+//       return -1
+//     } else if (value1 > value2) {
+//       return 1
+//     } else {
+//       return 0
+//     }
+//   }
+// }
+// var data = [{ name: 'zhishouh', age: 19 }, { name: 'pepsi', age: 20 }]
+// data.sort(createComparisonFunction('name'))
+// console.log(data[0].name) // pepsi
+// data.sort(createComparisonFunction('age'))
+// console.log(data[0].name) // zhishouh
+
+function factorial (num) {
+  if (num <= 1) {
+    return 1
+  } else {
+    return num * factorial(num - 1)
   }
 }
-var data = [{ name: 'zhishouh', age: 19 }, { name: 'pepsi', age: 20 }]
-data.sort(createComparisonFunction('name'))
-console.log(data[0].name) // pepsi
-data.sort(createComparisonFunction('age'))
-console.log(data[0].name) // zhishouh
