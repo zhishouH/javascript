@@ -817,7 +817,7 @@
 - (5) 函数内部属性
   - arguments
   ```
-  阶乘函数：
+  阶乘函数：(递归算法)
   函数内部属性
   function factorial (num) {
     if (num <= 1) {
@@ -829,6 +829,7 @@
   console.log(factorial(5)) // 1 * 2 * 3 * 4 * 5 = 120
   ```
   ```
+  阶乘函数：(arguments.callee)
   function factorial (num) {
     if (num <= 1) {
       return 1
