@@ -485,11 +485,21 @@
 // data.sort(createComparisonFunction('age'))
 // console.log(data[0].name) // zhishouh
 
+// 函数内部属性
+// function factorial (num) {
+//   if (num <= 1) {
+//     return 1
+//   } else {
+//     return num * factorial(num - 1)
+//   }
+// }
+// console.log(factorial(5)) // 1 * 2 * 3 * 4 * 5 = 120
+
 function factorial (num) {
   if (num <= 1) {
     return 1
   } else {
-    return num * factorial(num - 1)
+    return num * arguments.callee(num - 1)
   }
 }
-console.log(factorial(5)) // 1 * 2 * 3 * 4 * 5 = 120
+console.log(factorial(5))
