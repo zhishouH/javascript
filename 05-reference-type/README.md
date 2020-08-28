@@ -818,7 +818,6 @@
   - arguments
   ```
   阶乘函数：(递归算法)
- 
   function factorial (num) {
     if (num <= 1) {
       return 1
