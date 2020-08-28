@@ -839,3 +839,16 @@
   console.log(factorial(5))  // 1 * 2 * 3 * 4 * 5 = 120
   ```
   - this 
+  ```
+  window.color = 'red'
+  var o = { color: 'blue' }
+
+  function sayColor () {
+    console.log(this.color)
+  }
+
+  sayColor() // red
+
+  o.sayColor = sayColor
+  o.sayColor() // blue
+  ```
