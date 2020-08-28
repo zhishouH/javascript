@@ -492,3 +492,4 @@ function factorial (num) {
     return num * factorial(num - 1)
   }
 }
+console.log(factorial(5)) // 1 * 2 * 3 * 4 * 5 = 120
