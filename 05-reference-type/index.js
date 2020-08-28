@@ -486,6 +486,7 @@
 // console.log(data[0].name) // zhishouh
 
 // 函数内部属性
+// arguments.callee
 // function factorial (num) {
 //   if (num <= 1) {
 //     return 1
@@ -495,11 +496,24 @@
 // }
 // console.log(factorial(5)) // 1 * 2 * 3 * 4 * 5 = 120
 
-function factorial (num) {
-  if (num <= 1) {
-    return 1
-  } else {
-    return num * arguments.callee(num - 1)
-  }
+// function factorial (num) {
+//   if (num <= 1) {
+//     return 1
+//   } else {
+//     return num * arguments.callee(num - 1)
+//   }
+// }
+// console.log(factorial(5))
+
+// this
+window.color = 'red'
+var o = { color: 'blue' }
+
+function sayColor () {
+  console.log(this.color)
 }
-console.log(factorial(5))
+
+sayColor() // red
+
+o.sayColor = sayColor
+o.sayColor() // blue
