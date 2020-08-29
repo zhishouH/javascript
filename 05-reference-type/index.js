@@ -506,14 +506,23 @@
 // console.log(factorial(5))
 
 // this
-window.color = 'red'
-var o = { color: 'blue' }
+// window.color = 'red'
+// var o = { color: 'blue' }
 
-function sayColor () {
-  console.log(this.color)
+// function sayColor () {
+//   console.log(this.color)
+// }
+
+// sayColor() // red
+
+// o.sayColor = sayColor
+// o.sayColor() // blue
+
+// caller
+function outer () {
+  inner()
 }
-
-sayColor() // red
-
-o.sayColor = sayColor
-o.sayColor() // blue
+function inner () {
+  console.log(arguments.callee.caller)
+}
+outer()
