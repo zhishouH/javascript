@@ -814,41 +814,44 @@
   data.sort(createComparisonFunction('age'))
   console.log(data[0].name)  // zhishouh
   ```
-- (5) 函数内部属性
-  - arguments
-  ```
-  阶乘函数：(递归算法)
-  function factorial (num) {
-    if (num <= 1) {
-      return 1
-    } else {
-      return num * factorial(num - 1)
+
+  - (5) 函数内部属性
+    - arguments
+    ```
+    阶乘函数：(递归算法)
+    function factorial (num) {
+      if (num <= 1) {
+        return 1
+      } else {
+        return num * factorial(num - 1)
+      }
     }
-  }
-  console.log(factorial(5)) // 1 * 2 * 3 * 4 * 5 = 120
-  ```
-  ```
-  阶乘函数：(arguments.callee)
-  function factorial (num) {
-    if (num <= 1) {
-      return 1
-    } else {
-      return num * arguments.callee(num - 1)
+    console.log(factorial(5)) // 1 * 2 * 3 * 4 * 5 = 120
+    ```
+    ```
+    阶乘函数：(arguments.callee)
+    function factorial (num) {
+      if (num <= 1) {
+        return 1
+      } else {
+        return num * arguments.callee(num - 1)
+      }
     }
-  }
-  console.log(factorial(5))  // 1 * 2 * 3 * 4 * 5 = 120
-  ```
-  - this 
-  ```
-  window.color = 'red'
-  var o = { color: 'blue' }
+    console.log(factorial(5))  // 1 * 2 * 3 * 4 * 5 = 120
+    ```
+    - this 
+    ```
+    window.color = 'red'
+    var o = { color: 'blue' }
 
-  function sayColor () {
-    console.log(this.color)
-  }
+    function sayColor () {
+      console.log(this.color)
+    }
 
-  sayColor() // red
+    sayColor() // red
 
-  o.sayColor = sayColor
-  o.sayColor() // blue
-  ```
+    o.sayColor = sayColor
+    o.sayColor() // blue
+    ```
+
+  - (6)
