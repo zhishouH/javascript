@@ -817,41 +817,47 @@
 
   - (5) 函数内部属性
     - arguments
-    ```
-    阶乘函数：(递归算法)
-    function factorial (num) {
-      if (num <= 1) {
-        return 1
-      } else {
-        return num * factorial(num - 1)
-      }
+  ```
+  阶乘函数：(递归算法)
+  function factorial (num) {
+    if (num <= 1) {
+      return 1
+    } else {
+      return num * factorial(num - 1)
     }
-    console.log(factorial(5)) // 1 * 2 * 3 * 4 * 5 = 120
-    ```
-    ```
-    阶乘函数：(arguments.callee)
-    function factorial (num) {
-      if (num <= 1) {
-        return 1
-      } else {
-        return num * arguments.callee(num - 1)
-      }
+  }
+  console.log(factorial(5)) // 1 * 2 * 3 * 4 * 5 = 120
+  ```
+  ```
+  阶乘函数：(arguments.callee)
+  function factorial (num) {
+    if (num <= 1) {
+      return 1
+    } else {
+      return num * arguments.callee(num - 1)
     }
-    console.log(factorial(5))  // 1 * 2 * 3 * 4 * 5 = 120
+  }
+  console.log(factorial(5))  // 1 * 2 * 3 * 4 * 5 = 120
+  ```
+  - this 
+  ```
+  window.color = 'red'
+  var o = { color: 'blue' }
+
+  function sayColor () {
+    console.log(this.color)
+  }
+
+  sayColor() // red
+
+  o.sayColor = sayColor
+  o.sayColor() // blue
+  ```
+
+  - (6) 函数属性和方法
+    - 属性：
+      - length：表示函数希望接受的命名参数的个数
+      - prototype：
     ```
-    - this 
+    
     ```
-    window.color = 'red'
-    var o = { color: 'blue' }
-
-    function sayColor () {
-      console.log(this.color)
-    }
-
-    sayColor() // red
-
-    o.sayColor = sayColor
-    o.sayColor() // blue
-    ```
-
-  - (6)
