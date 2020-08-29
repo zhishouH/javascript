@@ -774,6 +774,7 @@
 
   - (4) 作为值的函数
   ```
+  把一个函数传递给另一个函数
   function callSomeFuction (SomeFuction, somArgument) {
     return SomeFuction(somArgument)
   }
