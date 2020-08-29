@@ -519,10 +519,25 @@
 // o.sayColor() // blue
 
 // caller
-function outer () {
-  inner()
+// function outer () {
+//   inner()
+// }
+// function inner () {
+//   console.log(arguments.callee.caller)
+// }
+// outer()
+
+// 函数属性和方法
+// length
+function sayName (name) {
+  console.log(name)
 }
-function inner () {
-  console.log(arguments.callee.caller)
+function sum (num1, num2) {
+  return num1 + num2
 }
-outer()
+function sayHi () {
+  console.log('Hi')
+}
+console.log(sayName.length)
+console.log(sum.length)
+console.log(sayHi.length)
