@@ -859,17 +859,20 @@
     - 属性：
       - length：表示函数希望接受的命名参数的个数
       - prototype：
-  ```
-  function sayName (name) {
-    console.log(name)
-  }
-  function sum (num1, num2) {
-    return num1 + num2
-  }
-  function sayHi () {
-    console.log('Hi')
-  }
-  console.log(sayName.length)  // 1
-  console.log(sum.length)  // 2
-  console.log(sayHi.length)  // 0
-  ```
+    ```
+    function sayName (name) {
+      console.log(name)
+    }
+    function sum (num1, num2) {
+      return num1 + num2
+    }
+    function sayHi () {
+      console.log('Hi')
+    }
+    console.log(sayName.length)  // 1
+    console.log(sum.length)  // 2
+    console.log(sayHi.length)  // 0
+    ```
+    - 方法
+      - apply()
+      - call()
