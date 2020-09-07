@@ -874,6 +874,7 @@
     console.log(sayHi.length)  // 0
     ```
     - 方法
+      - 用途是在特定的作用域中调用函数
       - apply()
       - call()
     ```
