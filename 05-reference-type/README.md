@@ -876,14 +876,15 @@
     - 方法
       - 用途是在特定的作用域中调用函数
       - apply()接收两个参数：一个是在其作中运行函数的作用域，一个是参数数组(也可以是Array实例和argument对象)
-      - call()
+      - call()传递给函数的参数必须逐个例举出来
     ```
+    apply():
     function sum (num1, num2) {
       return num1 + num2
     }
     function callSum1 (num1, num2) {
       return sum.apply(this, arguments)
-    }
+  }
     function callSum2 (num1, num2) {
       return sum.apply(this, [num1, num2])
     }
@@ -891,6 +892,7 @@
     console.log(callSum2(10, 10)) // 20
     ```
     ```
+    call():
     function sum (num1, num2) {
       return num1 + num2
     }
