@@ -555,31 +555,42 @@
 // console.log(callSum1(10, 10)) // 20
 // console.log(callSum2(10, 10)) // 20
 
-function sum (num1, num2) {
-  return num1 + num2
-}
-function callSum (num1, num2) {
-  return sum.call(this, num1, num2)
-}
-console.log(callSum(10, 10))
+// function sum (num1, num2) {
+//   return num1 + num2
+// }
+// function callSum (num1, num2) {
+//   return sum.call(this, num1, num2)
+// }
+// console.log(callSum(10, 10))
 
-window.color = 'red'
-var o = { color: 'blue' }
+// window.color = 'red'
+// var o = { color: 'blue' }
 
-function sayColor () {
-  console.log(this.color)
-}
-sayColor()
+// function sayColor () {
+//   console.log(this.color)
+// }
+// sayColor()
 
-sayColor.call(this)
-sayColor.call(window)
-sayColor.call(o)
+// sayColor.call(this)
+// sayColor.call(window)
+// sayColor.call(o)
 
+// window.color = 'red'
+// var o = {
+//   color: 'blue'
+// }
+// function sayColor() {
+//   console.log(this.color)
+// }
+// var objectSayColor = sayColor.bind(o)
+// objectSayColor()
+
+// bind()
 window.color = 'red'
 var o = {
   color: 'blue'
 }
-function sayColor() {
+function sayColor () {
   console.log(this.color)
 }
 var objectSayColor = sayColor.bind(o)
