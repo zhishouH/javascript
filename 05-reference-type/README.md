@@ -925,6 +925,8 @@
       console.log(this.color)
     }
     var objectSayColor = sayColor.bind(o)
-    objectSayColor()
-
+    objectSayColor()  // blue
     ```
+    
+- 6、基本包装类型
+  
