@@ -875,8 +875,9 @@
     ```
     - 方法
       - 用途是在特定的作用域中调用函数
-      - apply()接收两个参数：一个是在其作中运行函数的作用域，一个是参数数组(也可以是Array实例和argument对象)
-      - call()传递给函数的参数必须逐个例举出来
+      - apply(),接收两个参数：一个是在其作中运行函数的作用域，一个是参数数组(也可以是Array实例和argument对象)
+      - call(),传递给函数的参数必须逐个例举出来
+      - bind(),会创建一个函数的实例，其this值会被绑定到传给bind()函数的值
     ```
     apply():
     function sum (num1, num2) {
@@ -913,5 +914,5 @@
 
     sayColor.call(this)  // red
     sayColor.call(window)  // red
-    sayColor.call(o)  // blue
+    sayColor.call(o)  // blue 
     ```
