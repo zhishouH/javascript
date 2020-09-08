@@ -902,15 +902,16 @@
     console.log(callSum(10, 10))  // 20 
     ```
     ```
+    扩充函数赖以运行的作用域：
     window.color = 'red'
     var o = { color: 'blue' }
 
     function sayColor () {
-    console.log(this.color)
+      console.log(this.color)
     }
-    sayColor()
+    sayColor()  // red
 
-    sayColor.call(this)
-    sayColor.call(window)
-    sayColor.call(o)
+    sayColor.call(this)  // red
+    sayColor.call(window)  // red
+    sayColor.call(o)  // blue
     ```
