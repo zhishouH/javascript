@@ -932,5 +932,6 @@
   ```
   var s1 = 'some text'
   var s2 = s1.substring(2)
-  console.log(s2)
+  console.log(s2)  // me text
   ```
+  - 这个例子中的变量s1包含一个字符串,字符串是基本类型值
