@@ -945,4 +945,13 @@
   var s1 = new String("some text")
   var s2 = s1.substring(2)
   s1 = null 
+
+  经过处理之后，基本的字符串值就变得像对象一样
+  ```
+  ```
+  自动创建的基本包装类型的对象，只存在于一行代码的执行瞬间，然后立即被销毁
+  这意味着不能在运行时为基本类型值添加属性和方法
+  var s1 = 'some text'
+  s1.color = 'red'
+  console.log(s1.color) // undefined
   ```
