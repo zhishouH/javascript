@@ -933,5 +933,6 @@
   var s1 = 'some text'
   var s2 = s1.substring(2)
   console.log(s2)  // me text
+
+  这个例子中的变量s1包含一个字符串,字符串是基本类型值。而下一行调用了s1的substring()方法，并将返回的结果保存在s2中。
   ```
-  - 这个例子中的变量s1包含一个字符串,字符串是基本类型值
