@@ -941,6 +941,7 @@
   (1)创建String类型的一个实例
   (2)在实例上调用指定的方法
   (3)销毁这个实例
+  
   var s1 = new String("some text")
   var s2 = s1.substring(2)
   s1 = null 
