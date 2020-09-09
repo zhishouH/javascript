@@ -596,6 +596,10 @@
 // var objectSayColor = sayColor.bind(o)
 // objectSayColor()
 
+// var s1 = 'some text'
+// var s2 = s1.substring(2)
+// console.log(s2)
+
 var s1 = 'some text'
-var s2 = s1.substring(2)
-console.log(s2)
+s1.color = 'red'
+console.log(s1.color) // undefined
