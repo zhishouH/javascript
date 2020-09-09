@@ -586,12 +586,16 @@
 // objectSayColor()
 
 // bind()
-window.color = 'red'
-var o = {
-  color: 'blue'
-}
-function sayColor () {
-  console.log(this.color)
-}
-var objectSayColor = sayColor.bind(o)
-objectSayColor()
+// window.color = 'red'
+// var o = {
+//   color: 'blue'
+// }
+// function sayColor () {
+//   console.log(this.color)
+// }
+// var objectSayColor = sayColor.bind(o)
+// objectSayColor()
+
+var s1 = 'some text'
+var s2 = s1.substring(2)
+console.log(s2)
