@@ -606,5 +606,9 @@
 // console.log(s1.color) // undefined
 
 // Boolea类型
-var booleanObject = new Boolean(false)
-console.log(booleanObject)
+// var booleanObject = new Boolean(true)
+// console.log(booleanObject)
+
+var falseObject = new Boolean(false)
+var result = falseObject && true
+console.log(result) // true
