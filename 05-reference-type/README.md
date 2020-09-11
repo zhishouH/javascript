@@ -955,3 +955,8 @@
   s1.color = 'red'
   console.log(s1.color) // undefined
   ```
+  - (1) Boolean类型
+    - 创建Boolean对象:调用Boolean构造函数并传入true或false值
+    ```
+    var booleanObject = new Boolean()
+    ```
