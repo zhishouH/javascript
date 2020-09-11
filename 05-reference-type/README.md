@@ -960,3 +960,8 @@
     ```
     var booleanObject = new Boolean()
     ```
+    ```
+    var falseObject = new Boolean(false)
+    var result = falseObject && true
+    console.log(result) // true
+    ```
