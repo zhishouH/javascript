@@ -960,8 +960,14 @@
     ```
     var booleanObject = new Boolean()
     ```
+    - 在布尔表达式中使用Boolean对象
     ```
     var falseObject = new Boolean(false)
     var result = falseObject && true
     console.log(result) // true
+    <!-- 布尔表达式中的所有对象都会被转换为true -->
+    
+    var falseValue = false
+    result = falseValue && true
+    console.log(result) // fasle
     ```
