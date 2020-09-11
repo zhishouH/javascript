@@ -596,10 +596,15 @@
 // var objectSayColor = sayColor.bind(o)
 // objectSayColor()
 
+// 基本包装类型
 // var s1 = 'some text'
 // var s2 = s1.substring(2)
 // console.log(s2)
 
-var s1 = 'some text'
-s1.color = 'red'
-console.log(s1.color) // undefined
+// var s1 = 'some text'
+// s1.color = 'red'
+// console.log(s1.color) // undefined
+
+// Boolea类型
+var booleanObject = new Boolean(false)
+console.log(booleanObject)
