@@ -956,11 +956,11 @@
   console.log(s1.color) // undefined
   ```
   - (1) Boolean类型
-    - 创建Boolean对象:调用Boolean构造函数并传入true或false值
+    - <1> 创建Boolean对象，调用Boolean构造函数并传入true或false值
     ```
     var booleanObject = new Boolean()
     ```
-    - 在布尔表达式中使用Boolean对象
+    - <2> 在布尔表达式中使用Boolean对象
     ```
     var falseObject = new Boolean(false)
     var result = falseObject && true
@@ -970,4 +970,48 @@
     var falseValue = false
     result = falseValue && true
     console.log(result) // fasle
+    ```
+    - <3> 基本类型与引用类型的布尔值的两个区别
+    ```
+    console.log(typeof falseObject) // object
+    console.log(typeof falseValue) // boolean
+    console.log(falseObject instanceof Boolean) // true
+    console.log(falseValue instanceof Boolean) // false
+    1、typeof操作符会对基本类型返回boolean,而对引用类型返回object
+    2、因为Boolean对象是Boolean类型的实例，
+      当使用instanceof时Boolean对象会返回true,而布尔值会返回false
+    ```
+  - (2) Number类型
+    - <1> 创建Number对象，调用NUmber构造函数向其传入数值
+    ```
+    var numberObject = new Number(10)
+    ```
+    - <2> 用toString()方法传递一个表示基数的参数，返回几进制数值的字符串形式
+    ```
+    var num = 10
+    console.log(num.toString()) // "10"
+    console.log(num.toString(2)) // "1010"
+    console.log(num.toString(8)) // "12"
+    console.log(num.toString(10)) // "10"
+    console.log(num.toString(16)) // "a"
+    ```
+    - <3> toFixed()方法-按照指定的小数位返回数值的字符串
+    ```
+    console.log(num.toFixed(2)) // 10.00
+    ```
+    ```
+    如果数值本身包含的小数位比指定的还多，那么接近指定的最大小数位的值就会舍入
+    var num2 = 10.005
+    console.log(num2.toFixed(2)) // 10.01
+    ```
+    - <4> toExponential()方法-返回以指数表示法(e表示法)表示的数值的字符串形式
+    ```
+    console.log(num.toExponential(1)) // 1.0e+1
+    ```
+    - <5> toPrecision()方法-可能会返回固定大小格式，也可能返回指数格式。实际上 toPrecision()会根据要处理的数值决定是调用toFixed()还是调用toExponential()。而这三个方法都可以通过向上或向下舍入，做到以最准确的形式来表示带有正确小数位的值。
+    ```
+    var num3 = 99
+    console.log(num3.toPrecision(1)) // 1e+2
+    console.log(num3.toPrecision(2)) // 99
+    console.log(num3.toPrecision(3)) // 99.0
     ```
