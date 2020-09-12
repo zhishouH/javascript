@@ -609,10 +609,41 @@
 // var booleanObject = new Boolean(true)
 // console.log(booleanObject)
 
-var falseObject = new Boolean(false)
-var result = falseObject && true
-console.log(result) // true
+// var falseObject = new Boolean(false)
+// var result = falseObject && true
+// console.log(result) // true
 
-var falseValue = false
-result = falseValue && true
-console.log(result) // fasle
+// var falseValue = false
+// result = falseValue && true
+// console.log(result) // fasle
+
+// console.log(typeof falseObject) // object
+// console.log(typeof falseValue) // boolean
+// console.log(falseObject instanceof Boolean) // true
+// console.log(falseValue instanceof Boolean) // false
+
+// Number类型
+var numberObject = new Number(10)
+console.log(numberObject)
+var numberObject2 = 22
+console.log(numberObject2)
+
+var num = 10
+console.log(num.toString()) // "10"
+console.log(num.toString(2)) // "1010"
+console.log(num.toString(8)) // "12"
+console.log(num.toString(10)) // "10"
+console.log(num.toString(16)) // "a"
+
+// tofixed()方法
+console.log(num.toFixed(2)) // 10.00
+
+var num2 = 10.005
+console.log(num2.toFixed(2)) // 10.01
+
+console.log(num.toExponential(1)) // 1.0e+1
+
+var num3 = 99
+console.log(num3.toPrecision(1)) // 1e+2
+console.log(num3.toPrecision(2)) // 99
+console.log(num3.toPrecision(3)) // 99.0
