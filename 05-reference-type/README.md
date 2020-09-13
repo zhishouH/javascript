@@ -1106,4 +1106,22 @@
     }
     console.log(positions) // [3, 24, 32, 35, 52]
     ```
-  - <6> trim()方法
+  - <6> trim()方法-创建一个字符串的副本，删除前置及后缀的所有空格，然后返回结果
+    ```
+    var stringValue = '   hello world   '
+    var timmedStringValue = stringValue.trim()
+    console.log(stringValue) // "   hello world   "
+    console.log(timmedStringValue) // "hello world"
+    ```
+  - <7> 字符串大小写转换方法
+    - toLowerCase()
+    - toLocaleLowerCase()
+    - toUpperCase()
+    - toLocaleUpperCase()
+    ```
+    var stringValue = 'hello world'
+    console.log(stringValue.toLocaleUpperCase()) // HELLO WORLD
+    console.log(stringValue.toUpperCase()) // HELLO WORLD
+    console.log(stringValue.toLocaleLowerCase()) // hello world
+    console.log(stringValue.toLowerCase()) // hello world
+    ```
