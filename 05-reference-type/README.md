@@ -1015,3 +1015,95 @@
     console.log(num3.toPrecision(2)) // 99
     console.log(num3.toPrecision(3)) // 99.0
     ```
+    - <6> 基本类型数值与引用类型数值的区别(与Boolean对象类似)
+    ```
+    var numberObject = new Number(10)
+    var numberValue = 10
+    console.log(typeof numberObject) // object
+    console.log(typeof numberValue) // number
+    console.log(numberObject instanceof Number) // true
+    console.log(numberValue instanceof Number) // false
+    ```
+  - (3) String类型
+    - <1> 创建String对象
+    ```
+    var stringObject = new String('hello world')
+    ```
+    - <2> length属性-表示字符串中包含多个字符
+    ```
+    var stringValue = 'hello world'
+    console.log(stringValue.length) // 11
+    ```
+    - <3> 字符方法
+      - charAt()-接受一个参数，基于0的字符位置，得到字符
+      - charCodeAt()-接受一个参数，基于0的字符位置，得到字符编码
+      - 访问个别字符的方法-使用方括号加数字索引，得到字符
+    ```
+    console.log(stringValue.charAt(0)) // "h"
+    ```
+    ```
+    console.log(stringValue.charCodeAt(0)) // "104"
+    ```
+    ```
+    console.log(stringValue[1]) // "e"
+    ```
+    - <4> 字符串操作方法
+      - concat()-用于将一个或多个字符串拼接起来，返回拼接得到的新字符串(可以接受任意多个参数)
+      - slice()-接收两个参数，第一个参数指定字符串的开始位置，第二个参数指定子字符串最后一个字符后面的位置，得到新字符串
+      - substr()-接收两个参数，第一个参数指定字符串的开始位置，第二个参数指定返回的字符个数，得到新字符串
+      - substring()--接收两个参数，第一个参数指定字符串的开始位置，第二个参数指定子字符串最后一个字符后面的位置，得到新字符串
+    ```
+    var stringValue2 = 'hello '
+    var result = stringValue2.concat('world')
+    console.log(result) // "hello world"
+    console.log(stringValue2) // "hello "
+    ```
+    ```
+    var result2 = stringValue2.concat('world', '!')
+    console.log(result2) // "hello world!"
+    console.log(stringValue2) // "hello "
+    ```
+    ```
+    var stringValue = 'hello world'
+    console.log(stringValue.slice(3)) // "lo world"
+    console.log(stringValue.substring(3)) // "lo world"
+    console.log(stringValue.substr(3)) // "lo world"
+    console.log(stringValue.slice(3, 7)) // "lo w"
+    console.log(stringValue.substring(3, 7)) // "lo w"
+    console.log(stringValue.substr(3, 7)) // "lo worl"
+    ```
+    ```
+    当传递给这些方法的参数是负数时，
+    slice()方法会将传入的负值与字符串的长度相加
+    substr()方法将负的第一个参数加上字符串的长度，将负的第二个参数转换为0
+    substring()方法会把所有的负值参数都转换为0
+    var stringValue = 'hello world'
+    console.log(stringValue.slice(-3)) // "rld"
+    console.log(stringValue.substring(-3)) // "hello world"
+    console.log(stringValue.substr(-3)) // "rld"
+    console.log(stringValue.slice(3, -4)) // "lo w"
+    console.log(stringValue.substring(3, -4)) // "hel"
+    console.log(stringValue.substr(3, -4)) // ""(空字符串)
+    ```
+  - <5> 字符串位置方法
+    - indexOf()-从字符串的开头向后搜索子字符串，可以接收可选的第二个参数，表示从字符串的哪个位置开始
+    - lastIndexOf()-从字符串的末尾向前搜索子字符串，可以接收可选的第二个参数，表示从字符串的哪个位置开始
+    ```
+    var stringValue = 'hello world'
+    console.log(stringValue.indexOf('o')) // 4
+    console.log(stringValue.lastIndexOf('o')) // 7
+    console.log(stringValue.indexOf('o', 6)) // 7
+    console.log(stringValue.lastIndexOf('o', 6)) // 4
+    ```
+    ```
+    综合例：
+    var stringValue = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+    var positions = new Array()
+    var pos = stringValue.indexOf('e')
+    while (pos > -1) {
+      positions.push(pos)
+      pos = stringValue.indexOf('e', pos + 1)
+    }
+    console.log(positions) // [3, 24, 32, 35, 52]
+    ```
+  - <6> trim()方法
