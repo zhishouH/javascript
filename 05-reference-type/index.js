@@ -697,11 +697,22 @@
 // console.log(stringValue.indexOf('o', 6)) // 7
 // console.log(stringValue.lastIndexOf('o', 6)) // 4
 
-var stringValue = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
-var positions = new Array()
-var pos = stringValue.indexOf('e')
-while (pos > -1) {
-  positions.push(pos)
-  pos = stringValue.indexOf('e', pos + 1)
-}
-console.log(positions) // [3, 24, 31, 34, 50]
+// var stringValue = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+// var positions = new Array()
+// var pos = stringValue.indexOf('e')
+// while (pos > -1) {
+//   positions.push(pos)
+//   pos = stringValue.indexOf('e', pos + 1)
+// }
+// console.log(positions) // [3, 24, 32, 35, 52]
+
+// var stringValue = '   hello world   '
+// var timmedStringValue = stringValue.trim()
+// console.log(stringValue) // "   hello world   "
+// console.log(timmedStringValue) // "hello world"
+
+var stringValue = 'hello world'
+console.log(stringValue.toLocaleUpperCase()) // HELLO WORLD
+console.log(stringValue.toUpperCase()) // HELLO WORLD
+console.log(stringValue.toLocaleLowerCase()) // hello world
+console.log(stringValue.toLowerCase()) // hello world
