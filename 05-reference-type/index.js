@@ -623,27 +623,85 @@
 // console.log(falseValue instanceof Boolean) // false
 
 // Number类型
-var numberObject = new Number(10)
-console.log(numberObject)
-var numberObject2 = 22
-console.log(numberObject2)
+// var numberObject = new Number(10)
+// console.log(numberObject)
+// var numberObject2 = 22
+// console.log(numberObject2)
 
-var num = 10
-console.log(num.toString()) // "10"
-console.log(num.toString(2)) // "1010"
-console.log(num.toString(8)) // "12"
-console.log(num.toString(10)) // "10"
-console.log(num.toString(16)) // "a"
+// var num = 10
+// console.log(num.toString()) // "10"
+// console.log(num.toString(2)) // "1010"
+// console.log(num.toString(8)) // "12"
+// console.log(num.toString(10)) // "10"
+// console.log(num.toString(16)) // "a"
 
-// tofixed()方法
-console.log(num.toFixed(2)) // 10.00
+// // tofixed()方法
+// console.log(num.toFixed(2)) // 10.00
 
-var num2 = 10.005
-console.log(num2.toFixed(2)) // 10.01
+// var num2 = 10.005
+// console.log(num2.toFixed(2)) // 10.01
 
-console.log(num.toExponential(1)) // 1.0e+1
+// console.log(num.toExponential(1)) // 1.0e+1
 
-var num3 = 99
-console.log(num3.toPrecision(1)) // 1e+2
-console.log(num3.toPrecision(2)) // 99
-console.log(num3.toPrecision(3)) // 99.0
+// var num3 = 99
+// console.log(num3.toPrecision(1)) // 1e+2
+// console.log(num3.toPrecision(2)) // 99
+// console.log(num3.toPrecision(3)) // 99.0
+
+// var numberObject = new Number(10)
+// var numberValue = 10
+// console.log(typeof numberObject) // object
+// console.log(typeof numberValue) // number
+// console.log(numberObject instanceof Number) // true
+// console.log(numberValue instanceof Number) // false
+
+// String类型
+// var stringObject = new String('hello world')
+// console.log(stringObject)
+
+// var stringValue = 'hello world'
+// console.log(stringValue.length) // 11
+
+// console.log(stringValue.charAt(0)) // "h"
+// console.log(stringValue.charCodeAt(0)) // "104"
+// console.log(stringValue[1]) // "e"
+
+// var stringValue2 = 'hello '
+// var result = stringValue2.concat('world')
+// console.log(result) // "hello world"
+// console.log(stringValue2) // "hello "
+
+// var result2 = stringValue2.concat('world', '!')
+// console.log(result2) // "hello world!"
+// console.log(stringValue2) // "hello "
+
+// var stringValue = 'hello world'
+// console.log(stringValue.slice(3)) // "lo world"
+// console.log(stringValue.substring(3)) // "lo world"
+// console.log(stringValue.substr(3)) // "lo world"
+// console.log(stringValue.slice(3, 7)) // "lo w"
+// console.log(stringValue.substring(3, 7)) // "lo w"
+// console.log(stringValue.substr(3, 7)) // "lo worl"
+
+// var stringValue = 'hello world'
+// console.log(stringValue.slice(-3)) // "rld"
+// console.log(stringValue.substring(-3)) // "hello world"
+// console.log(stringValue.substr(-3)) // "rld"
+// console.log(stringValue.slice(3, -4)) // "lo w"
+// console.log(stringValue.substring(3, -4)) // "hel"
+// console.log(stringValue.substr(3, -4)) // ""(空字符串)
+
+// var stringValue = 'hello world'
+// console.log(stringValue.indexOf('o')) // 4
+// console.log(stringValue.lastIndexOf('o')) // 7
+// console.log(stringValue.indexOf('o', 6)) // 7
+// console.log(stringValue.lastIndexOf('o', 6)) // 4
+
+var stringValue = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+var positions = new Array()
+var pos = stringValue.indexOf('e')
+while (pos > -1) {
+  positions.push(pos)
+  pos = stringValue.indexOf('e', pos + 1)
+}
+console.log(positions) // [3, 24, 31, 34, 50]
