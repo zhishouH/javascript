@@ -1125,3 +1125,14 @@
     console.log(stringValue.toLocaleLowerCase()) // "hello world"
     console.log(stringValue.toLowerCase()) // "hello world"
     ```
+  - <8> 字符串的模式匹配方法
+    - match()
+    ```
+    var text = 'cat, bat, sat, fat'
+    var pattern = /.at/
+
+    var marches = text.match(pattern)
+    console.log(marches.index) // 0
+    console.log(marches[0]) // "cat"
+    console.log(pattern.lastIndex) // 0
+    ```
