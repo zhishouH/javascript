@@ -711,8 +711,16 @@
 // console.log(stringValue) // "   hello world   "
 // console.log(timmedStringValue) // "hello world"
 
-var stringValue = 'hello world'
-console.log(stringValue.toLocaleUpperCase()) // "HELLO WORLD"
-console.log(stringValue.toUpperCase()) // "HELLO WORLD"
-console.log(stringValue.toLocaleLowerCase()) // "hello world"
-console.log(stringValue.toLowerCase()) // "hello world"
+// var stringValue = 'hello world'
+// console.log(stringValue.toLocaleUpperCase()) // "HELLO WORLD"
+// console.log(stringValue.toUpperCase()) // "HELLO WORLD"
+// console.log(stringValue.toLocaleLowerCase()) // "hello world"
+// console.log(stringValue.toLowerCase()) // "hello world"
+
+var text = 'cat, bat, sat, fat'
+var pattern = /.at/
+
+var marches = text.match(pattern)
+console.log(marches.index) // 0
+console.log(marches[0]) // "cat"
+console.log(pattern.lastIndex) // 0
