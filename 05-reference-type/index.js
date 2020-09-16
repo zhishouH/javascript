@@ -717,10 +717,25 @@
 // console.log(stringValue.toLocaleLowerCase()) // "hello world"
 // console.log(stringValue.toLowerCase()) // "hello world"
 
-var text = 'cat, bat, sat, fat'
-var pattern = /.at/
+// var text = 'cat, bat, sat, fat'
+// var pattern = /.at/
 
-var marches = text.match(pattern)
-console.log(marches.index) // 0
-console.log(marches[0]) // "cat"
-console.log(pattern.lastIndex) // 0
+// var marches = text.match(pattern)
+// console.log(marches.index) // 0
+// console.log(marches[0]) // "cat"
+// console.log(pattern.lastIndex) // 0
+
+// var text = 'cat, bat, sat, fat'
+// var pos = text.search(/at/)
+// console.log(pos) // 1
+
+// var text = 'cat, bat, sat, fat'
+// var result = text.replace('at', 'ond')
+// console.log(result) // "cond", "bat", "sat", "fat"
+
+// result = text.replace(/at/g, 'ond')
+// console.log(result) // "cond", "bond", "sond", "fond"
+
+// var text = 'cat, bat, sat, fat'
+// var result = text.replace(/(.at)/g, 'word($1)')
+// console.log(result) // word(cat), word(bat), word(sat), word(fat)
