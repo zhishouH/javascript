@@ -1126,7 +1126,9 @@
     console.log(stringValue.toLowerCase()) // "hello world"
     ```
   - <8> 字符串的模式匹配方法
-    - match()
+    - match()-接受一个参数，正则表达式或RegExp对象
+    - search()-由字符串或RegExp对象指定一个正则表达式
+    - replace()-替换子字符串，接受两个参数：第一个参数可以是RegExp对象或字符串，第二个参数可以是字符串或函数
     ```
     var text = 'cat, bat, sat, fat'
     var pattern = /.at/
@@ -1135,4 +1137,33 @@
     console.log(marches.index) // 0
     console.log(marches[0]) // "cat"
     console.log(pattern.lastIndex) // 0
+    ```
+    ```
+    var text = 'cat, bat, sat, fat'
+    var pos = text.search(/at/)
+    console.log(pos) // 1
+    ```
+    ```
+    var text = 'cat, bat, sat, fat'
+    var result = text.replace('at', 'ond')
+    console.log(result) // "cond", "bat", "sat", "fat"
+
+    result = text.replace(/at/g, 'ond')
+    console.log(result) // "cond", "bond", "sond", "fond"
+    ```
+    - 特殊的字符序列
+
+    |字符序列|替换文本|
+    |:--|:--|
+    |$$|$|
+    |$&|匹配整个模式的子字符串|
+    |$'|匹配的子字符串之前的子字符串|
+    |$`|匹配的子字符串之后的字符串|
+    |$n|匹配第n个捕获组的子字符串,其中n等于0~9|
+    |$nn|匹配第nn个捕获组的子字符串,其中nn等于01~99|
+
+    ```
+    var text = 'cat, bat, sat, fat'
+    var result = text.replace(/(.at)/g, 'word($1)')
+    console.log(result) // word(cat), word(bat), word(sat), word(fat)
     ```
