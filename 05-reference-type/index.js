@@ -739,3 +739,51 @@
 // var text = 'cat, bat, sat, fat'
 // var result = text.replace(/(.at)/g, 'word($1)')
 // console.log(result) // word(cat), word(bat), word(sat), word(fat)
+
+// function htmlEscape (text) {
+//   return text.replace(/[<>"&]/g, function (match, pos, originalText) {
+//     switch (match) {
+//       case '<':
+//         return '&lt'
+//       case '>':
+//         return '&gt'
+//       case '&':
+//         return '&amp'
+//       case '\"':
+//         return '&quot'
+//     }
+//   })
+// }
+// console.log(htmlEscape('<p class="greeing">Hello world!</p>'))
+// // &ltp class=&quotgreeing&quot&gtHello world!&lt/p&gt
+
+// var colorText = 'red, blue, green, yellow'
+// var color1 = colorText.split(',')
+// var color2 = colorText.split(',', 2)
+// var color3 = colorText.split(/[^\,]+/)
+// console.log(colorText) // red, blue, green, yellow
+// console.log(color1) // ["red", " blue", " green", " yellow"]
+// console.log(color2) // ["red", " blue"]
+// console.log(color3) // ["", ",", ",", ",", ""]
+
+// var stringValue = 'yellow'
+// console.log(stringValue.localeCompare('brick')) // 1
+// console.log(stringValue.localeCompare('yellow')) // 0
+// console.log(stringValue.localeCompare('zoo')) // -1
+
+// var stringValue = 'yellow'
+// function determineOrder (value) {
+//   var result = stringValue.localeCompare(value)
+//   if (result < 0) {
+//     console.log("The string 'yellow' comes before the string '" + value + "'. ")
+//   } else if (result > 0) {
+//     console.log("The string 'yellow' comes after the string '" + value + "'. ")
+//   } else {
+//     console.log("The string 'yellow' is equal the string '" + value + "'.")
+//   }
+// }
+// determineOrder('brick') // The string 'yellow' comes after the string 'brick'.
+// determineOrder('yellow') // The string 'yellow' is equal the string 'yellow'
+// determineOrder('zoo') // The string 'yellow' comes before the string 'zoo'.
+
+console.log(String.fromCharCode(104, 101, 108, 108, 111)) // hello
