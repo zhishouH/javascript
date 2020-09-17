@@ -793,6 +793,26 @@
 // global对象
 
 // uri编码方法
-var uri = 'http://www.wrox.com/illegal value.htm#start'
-console.log(encodeURI(uri)) // http://www.wrox.com/illegal%20value.htm#start
-console.log(encodeURIComponent(uri)) // http%3A%2F%2Fwww.wrox.com%2Fillegal%20value.htm%23start
+// var uri = 'http://www.wrox.com/illegal value.htm#start'
+// console.log(encodeURI(uri)) // http://www.wrox.com/illegal%20value.htm#start
+// console.log(encodeURIComponent(uri)) // http%3A%2F%2Fwww.wrox.com%2Fillegal%20value.htm%23start
+
+// 解码方法
+// var uri = 'http%3A%2F%2Fwww.wrox.com%2Fillegal%20value.htm%23start'
+// console.log(decodeURI(uri)) // http%3A%2F%2Fwww.wrox.com%2Fillegal value.htm%23start
+// console.log(decodeURIComponent(uri)) // http://www.wrox.com/illegal value.htm#start
+
+// eval("console.log('hi!')") // "hi!"
+// console.log('hi!') // "hi!"
+
+// var msg = 'hello world'
+// eval('console.log(msg)') // "hello world"
+
+// eval('function sayHi(){console.log("hi!")}')
+// sayHi() // "hi!"
+
+// eval("var msg = 'hello world'")
+// console.log(msg) // "hello world"
+
+// 'use strict'
+// eval = "hi"  // causes error
