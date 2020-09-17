@@ -1253,3 +1253,16 @@
       |10|strike()|\<strike>string\</srike>|
       |11|sun()|\<sub>string\</sub>|
       |12|sup()|\<sup>string\</sup>|
+
+- 7、单体内置对象
+  - (1) Global对象
+    - <1> URI编码方法
+      - encodeURI()-用于整个URI，不会对本身属于URI的特殊字符进行编码，例如冒号、正斜杠、问号和井号
+      - encodeURIComponent()-用于对URI中的某一段进行编码，会对它发现的任何非标准字符进行编码
+    ```
+    var uri = 'http://www.wrox.com/illegal value.htm#start'
+    console.log(encodeURI(uri)) // http://www.wrox.com/illegal%20value.htm#start
+    console.log(encodeURIComponent(uri)) // http%3A%2F%2Fwww.wrox.com%2Fillegal%20value.htm%23start
+    使用encodeURI()编码后的结果是除了空格之外的其他字符原封不动，只有空格被替换成%20
+    而encodeURIComeponent()方法则会使用对应的编码替换所有非字母数字字符
+    ```
