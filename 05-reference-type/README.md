@@ -1129,7 +1129,9 @@
     - match()-接受一个参数，正则表达式或RegExp对象
     - search()-由字符串或RegExp对象指定一个正则表达式
     - replace()-替换子字符串，接受两个参数：第一个参数可以是RegExp对象或字符串，第二个参数可以是字符串或函数
+    - split()-基于指定的分隔符将一个字符串分隔成多个子字符串，并将结果放在一个数组中
     ```
+    match():
     var text = 'cat, bat, sat, fat'
     var pattern = /.at/
 
@@ -1139,11 +1141,13 @@
     console.log(pattern.lastIndex) // 0
     ```
     ```
+    search():
     var text = 'cat, bat, sat, fat'
     var pos = text.search(/at/)
     console.log(pos) // 1
     ```
     ```
+    replace():  
     var text = 'cat, bat, sat, fat'
     var result = text.replace('at', 'ond')
     console.log(result) // "cond", "bat", "sat", "fat"
@@ -1167,3 +1171,85 @@
     var result = text.replace(/(.at)/g, 'word($1)')
     console.log(result) // word(cat), word(bat), word(sat), word(fat)
     ```
+    ```
+    使用函数作为replace()方法的第二个参数可以实现更加精细的替换：
+    function htmlEscape (text) {
+      return text.replace(/[<>"&]/g, function (match, pos, originalText) {
+        switch (match) {
+          case '<':
+            return '&lt'
+          case '>':
+            return '&gt'
+          case '&':
+            return '&amp'
+          case '\"':
+            return '&quot'
+        }
+      })
+    }
+    console.log(htmlEscape('<p class="greeing">Hello world!</p>'))
+    // &ltp class=&quotgreeing&quot&gtHello world!&lt/p&gt
+    ```
+    ```
+    split():
+    分隔符可以是字符串，也可以是RegExp对象；
+    可接受可选的第二个参数，用于指定数组的大小
+    var colorText = 'red, blue, green, yellow'
+    var color1 = colorText.split(',')
+    var color2 = colorText.split(',', 2)
+    var color3 = colorText.split(/[^\,]+/)
+    console.log(colorText) // red, blue, green, yellow
+    console.log(color1) // ["red", " blue", " green", " yellow"]
+    console.log(color2) // ["red", " blue"]
+    console.log(color3) // ["", ",", ",", ",", ""]
+    ```
+  - <9> localeCompare()方法
+    - 比较两个字符串并返回下列值中的一个：
+      - 如果字符串在字母表中应该排在字符串参数之前，则返回一个负数
+      - 如果字符串等于字符串参数，则返回0
+      - 如果字符串在字母表中应该排在字符串参数之后，则返回一个正数
+    ```
+    var stringValue = 'yellow'
+    console.log(stringValue.localeCompare('brick')) // 1
+    console.log(stringValue.localeCompare('yellow')) // 0
+    console.log(stringValue.localeCompare('zoo')) // -1
+    ```
+    ```
+    因为localeCompare()返回的数值取决于实现，所以最好是如下使用找个方法：
+    var stringValue = 'yellow'
+    function determineOrder (value) {
+      var result = stringValue.localeCompare(value)
+      if (result < 0) {
+        console.log("The string 'yellow' comes before the string '" + value + "'. ")
+      } else if (result > 0) {
+        console.log("The string 'yellow' comes after the string '" + value + "'. ")
+      } else {
+        console.log("The string 'yellow' is equal the string '" + value + "'.")
+      }
+    }
+    determineOrder('brick') // The string 'yellow' comes after the string 'brick'.
+    determineOrder('yellow') // The string 'yellow' is equal the string 'yellow'
+    determineOrder('zoo') // The string 'yellow' comes before the string 'zoo'.
+    ```
+  - <10> fromCharCode()方法
+    - 接受一个或多个字符编码，然后转换成一个字符串
+    ```
+    console.log(String.fromCharCode(104, 101, 108, 108, 111)) // hello
+    ```
+  - <11> HTML方法
+    - 尽量不使用这些方法，因为它们创建的标记通常无法表示语义
+
+      |序号|方法|输出结果|
+      |:--|:--|:--|
+      |1|anchor()|\<a name= "name">string\</a>|
+      |2|big()|\<big>string\</big>|
+      |3|bold()|\<b>string\</b>|
+      |4|fixed()|\<tt>string\</tt>|
+      |5|fontcolor(color)|\<font color="color">string\</font>|
+      |6|fontsize(size)|\<font size="size">string\<font>|
+      |7|italics()|\<i>string\<i>|
+      |8|link(url)|\<a href="url">string\</a>|
+      |9|small()|\<small>string\</small>|
+      |10|strike()|\<strike>string\</srike>|
+      |11|sun()|\<sub>string\</sub>|
+      |12|sup()|\<sup>string\</sup>|
