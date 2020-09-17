@@ -786,4 +786,13 @@
 // determineOrder('yellow') // The string 'yellow' is equal the string 'yellow'
 // determineOrder('zoo') // The string 'yellow' comes before the string 'zoo'.
 
-console.log(String.fromCharCode(104, 101, 108, 108, 111)) // hello
+// console.log(String.fromCharCode(104, 101, 108, 108, 111)) // hello
+
+// 单体内置对象
+
+// global对象
+
+// uri编码方法
+var uri = 'http://www.wrox.com/illegal value.htm#start'
+console.log(encodeURI(uri)) // http://www.wrox.com/illegal%20value.htm#start
+console.log(encodeURIComponent(uri)) // http%3A%2F%2Fwww.wrox.com%2Fillegal%20value.htm%23start
