@@ -1343,6 +1343,61 @@
     var global = function(){
       retuen this
     } ()
-
     在没有给函数明确指定this值的情况下，this值等于Global对象
     ```
+  - (2) Math对象
+    - <1> Math对象的属性
+
+    |序号|属性|说明|
+    |:--|:--|:--|
+    |1|Math.E|自然对数的底数，即常量e的值|
+    |2|Math.LN10|10的自然对数|
+    |3|Math.LN2|2的自然对数|
+    |4|Math.LOG2E|以2为底e的对数|
+    |5|Math.LOG10E|以10为底e的对数|
+    |6|Math.PI|Π的值|
+    |7|Math.SQRT1_2|1/2的平方根(即2的平方根的倒数)|
+    |8|Math.SQRT2|2的平方根|
+
+    - <2> min()和max()方法
+    ```
+    min()和max()用于确定一组数值中的最小值和最大值，可接受任意多个数值参数
+    var max = Math.max(3, 54, 32, 16)
+    console.log(max)  // 54
+    var min = Math.min(3, 54, 32, 16)
+    console.log(min) // 3
+    ```
+    ```
+    要找到数组中的最大值或最小值，可以使用apply()方法
+    var values = [1, 2, 3, 4, 5, 6, 7, 8]
+    var max = Math.max.apply(Math, values)
+    console.log(max) // 8
+    ```
+    - <3> 舍入方法
+      - Math.ceil()-执行向上舍入，即它总是将数值向上舍入为最接近的整数
+      - Math.floor()-执行向下舍入，即它总是将数值向下舍入为最接近的整数
+      - Math.round()执行标准舍入，即它总是将数值四舍五入为最接近的整数
+    ```
+    console.log(Math.ceil(25.9)) // 26
+    console.log(Math.ceil(25.5)) // 26
+    console.log(Math.ceil(25.1)) // 26
+
+    console.log(Math.round(25.9)) // 26
+    console.log(Math.round(25.5)) // 26
+    console.log(Math.round(25.1)) // 25
+
+    console.log(Math.floor(25.9)) // 25
+    console.log(Math.floor(25.5)) // 25
+    console.log(Math.floor(25.1)) // 25
+    ```
+    - <4> random()方法
+      - 返回大于等于0小于1的一个随机数
+      ```
+      返回一个1到10之间的数值
+      var num = Math.floor(Math.random() * 10 + 1)
+      ```
+      ```
+      返回一个介于2到10之间的数值
+      var num = Math.floor(Math.random() * 9 + 2)
+      ```
+      
