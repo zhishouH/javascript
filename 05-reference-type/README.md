@@ -1239,20 +1239,20 @@
   - <11> HTML方法
     - 尽量不使用这些方法，因为它们创建的标记通常无法表示语义
 
-      |序号|方法|输出结果|
-      |:--|:--|:--|
-      |1|anchor()|\<a name= "name">string\</a>|
-      |2|big()|\<big>string\</big>|
-      |3|bold()|\<b>string\</b>|
-      |4|fixed()|\<tt>string\</tt>|
-      |5|fontcolor(color)|\<font color="color">string\</font>|
-      |6|fontsize(size)|\<font size="size">string\<font>|
-      |7|italics()|\<i>string\<i>|
-      |8|link(url)|\<a href="url">string\</a>|
-      |9|small()|\<small>string\</small>|
-      |10|strike()|\<strike>string\</srike>|
-      |11|sun()|\<sub>string\</sub>|
-      |12|sup()|\<sup>string\</sup>|
+    |序号|方法|输出结果|
+    |:--|:--|:--|
+    |1|anchor()|\<a name= "name">string\</a>|
+    |2|big()|\<big>string\</big>|
+    |3|bold()|\<b>string\</b>|
+    |4|fixed()|\<tt>string\</tt>|
+    |5|fontcolor(color)|\<font color="color">string\</font>|
+    |6|fontsize(size)|\<font size="size">string\<font>|
+    |7|italics()|\<i>string\<i>|
+    |8|link(url)|\<a href="url">string\</a>|
+    |9|small()|\<small>string\</small>|
+    |10|strike()|\<strike>string\</srike>|
+    |11|sun()|\<sub>string\</sub>|
+    |12|sup()|\<sup>string\</sup>|
 
 - 7、单体内置对象
   - (1) Global对象
@@ -1261,8 +1261,67 @@
       - encodeURIComponent()-用于对URI中的某一段进行编码，会对它发现的任何非标准字符进行编码
     ```
     var uri = 'http://www.wrox.com/illegal value.htm#start'
+
     console.log(encodeURI(uri)) // http://www.wrox.com/illegal%20value.htm#start
     console.log(encodeURIComponent(uri)) // http%3A%2F%2Fwww.wrox.com%2Fillegal%20value.htm%23start
+
     使用encodeURI()编码后的结果是除了空格之外的其他字符原封不动，只有空格被替换成%20
     而encodeURIComeponent()方法则会使用对应的编码替换所有非字母数字字符
     ```
+    - <2> URI解码方法
+      - decodeURI()-对使用encodeURI()替换的字符进行解码
+      - decodeURIComponent()-对使用encodeURIComponent()替换的字符进行解码
+    ```
+    var uri = 'http%3A%2F%2Fwww.wrox.com%2Fillegal%20value.htm%23start'
+    console.log(decodeURI(uri)) // http%3A%2F%2Fwww.wrox.com%2Fillegal value.htm%23start
+    console.log(decodeURIComponent(uri)) // http://www.wrox.com/illegal value.htm#start
+    ```
+
+    - <3> eval()方法
+    ```
+    就像是一个完整的ECMAScript解析器，只接受一个参数，即要执行的ECMAScript(或JavaScript)字符串
+    eval("console.log('hi!')") // "hi!"
+    等价于
+    console.log('hi!') // "hi!"
+    ```
+    ```
+    通过eval()执行的代码可以引用在包含环境中执行定义的变量
+    var msg = 'hello world'
+    eval('console.log(msg)') // "hello world"
+    ```
+    ```
+    可以在eval()调用中定义一个函数，然后再在该调用的外部代码中引用这个函数
+    eval('function sayHi(){console.log("hi!")}')
+    sayHi()  // "hi!"
+    ```
+    ```
+    可以在eval()调用中定义一个变量，然后再在该调用的外部代码中引用这个变量  
+    eval("var msg = 'hello world'")
+    console.log(msg) // "hello world"
+    ```
+    ```
+    在严格模式下，为eval赋值会导致错误
+    'use strict'
+    eval = "hi"  // causes error
+    ```
+  - <4> Global对象的属性
+    |序号|属性|说明|
+    |:--|:--|:--|
+    |1|undefined|特殊值undefined|
+    |2|NaN|特殊值NaN|
+    |3|Infinity|特殊值Infinity|
+    |4|Object|构造函数Object|
+    |5|Array|构造函数Array|
+    |6|Function|构造函数Function|
+    |7|Boolean|构造函数Boolean|
+    |8|String|构造函数String|
+    |9|Number|构造函数Number|
+    |10|Date|构造函数Date|
+    |11|RegExp|构造函数RegExp|
+    |12|Error|构造函数Error|
+    |13|EvalError|构造函数EvalError|
+    |14|RangeError|构造函数RangeError|
+    |15|ReferenceError|构造函数ReferenceError|
+    |16|SyntaxError|构造函数SyntaxError|
+    |17|TypeError|构造函数TypeError|
+    |18|URIError|构造函数URIError|
