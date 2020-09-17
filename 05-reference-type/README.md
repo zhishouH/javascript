@@ -1305,6 +1305,10 @@
     eval = "hi"  // causes error
     ```
   - <4> Global对象的属性
+    - 特殊的值undefined、NaN以及Infinity都是Global对象的属性
+    - 所有原生引用类型的构造函数也都是Global对象的属性，例Object和Function
+    - ECMAScript5明确禁止给undefined、NaN和Infinity赋值
+
     |序号|属性|说明|
     |:--|:--|:--|
     |1|undefined|特殊值undefined|
