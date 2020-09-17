@@ -1255,7 +1255,7 @@
     |12|sup()|\<sup>string\</sup>|
 
 - 7、单体内置对象
-  - (1) Global对象
+  - (1) Global(全局)对象
     - <1> URI编码方法
       - encodeURI()-用于整个URI，不会对本身属于URI的特殊字符进行编码，例如冒号、正斜杠、问号和井号
       - encodeURIComponent()-用于对URI中的某一段进行编码，会对它发现的任何非标准字符进行编码
@@ -1304,28 +1304,45 @@
     'use strict'
     eval = "hi"  // causes error
     ```
-  - <4> Global对象的属性
-    - 特殊的值undefined、NaN以及Infinity都是Global对象的属性
-    - 所有原生引用类型的构造函数也都是Global对象的属性，例Object和Function
-    - ECMAScript5明确禁止给undefined、NaN和Infinity赋值
+    - <4> Global对象的属性
+      - 特殊的值undefined、NaN以及Infinity都是Global对象的属性
+      - 所有原生引用类型的构造函数也都是Global对象的属性，例Object和Function
+      - ECMAScript5明确禁止给undefined、NaN和Infinity赋值
 
-    |序号|属性|说明|
-    |:--|:--|:--|
-    |1|undefined|特殊值undefined|
-    |2|NaN|特殊值NaN|
-    |3|Infinity|特殊值Infinity|
-    |4|Object|构造函数Object|
-    |5|Array|构造函数Array|
-    |6|Function|构造函数Function|
-    |7|Boolean|构造函数Boolean|
-    |8|String|构造函数String|
-    |9|Number|构造函数Number|
-    |10|Date|构造函数Date|
-    |11|RegExp|构造函数RegExp|
-    |12|Error|构造函数Error|
-    |13|EvalError|构造函数EvalError|
-    |14|RangeError|构造函数RangeError|
-    |15|ReferenceError|构造函数ReferenceError|
-    |16|SyntaxError|构造函数SyntaxError|
-    |17|TypeError|构造函数TypeError|
-    |18|URIError|构造函数URIError|
+      |序号|属性|说明|
+      |:--|:--|:--|
+      |1|undefined|特殊值undefined|
+      |2|NaN|特殊值NaN|
+      |3|Infinity|特殊值Infinity|
+      |4|Object|构造函数Object|
+      |5|Array|构造函数Array|
+      |6|Function|构造函数Function|
+      |7|Boolean|构造函数Boolean|
+      |8|String|构造函数String|
+      |9|Number|构造函数Number|
+      |10|Date|构造函数Date|
+      |11|RegExp|构造函数RegExp|
+      |12|Error|构造函数Error|
+      |13|EvalError|构造函数EvalError|
+      |14|RangeError|构造函数RangeError|
+      |15|ReferenceError|构造函数ReferenceError|
+      |16|SyntaxError|构造函数SyntaxError|
+      |17|TypeError|构造函数TypeError|
+      |18|URIError|构造函数URIError|
+    - <5> window对象
+    ```
+    在全局作用域中声明的所有变量和函数，就都成为了window对象的属性
+    var color = 'red'
+    function sayColor () {
+      console.log(window.color)
+    }
+    window.sayColor() // red
+    ```
+    ```
+    另一种取得Global对象的方法
+    var global = function(){
+      retuen this
+    } ()
+
+    在没有给函数明确指定this值的情况下，this值等于Global对象
+    ```
