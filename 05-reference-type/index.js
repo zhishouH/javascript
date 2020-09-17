@@ -823,7 +823,42 @@
 // }
 // window.sayColor() // red
 
-var global = (function () {
-  return this
-}())
-console.log(global)
+// var global = (function () {
+//   return this
+// }())
+// console.log(global)
+
+// console.log(Math.E)
+// console.log(Math.LN10)
+// console.log(Math.LN2)
+// console.log(Math.LOG2E)
+// console.log(Math.LOG10E)
+// console.log(Math.PI)
+// console.log(Math.SQRT1_2)
+// console.log(Math.SQRT2)
+
+// var max = Math.max(3, 54, 32, 16)
+// console.log(max) // 54
+// var min = Math.min(3, 54, 32, 16)
+// console.log(min) // 3
+
+// var values = [1, 2, 3, 4, 5, 6, 7, 8]
+// var max = Math.max.apply(Math, values)
+// console.log(max) // 8
+
+// console.log(Math.ceil(25.9)) // 26
+// console.log(Math.ceil(25.5)) // 26
+// console.log(Math.ceil(25.1)) // 26
+
+// console.log(Math.round(25.9)) // 26
+// console.log(Math.round(25.5)) // 26
+// console.log(Math.round(25.1)) // 25
+
+// console.log(Math.floor(25.9)) // 25
+// console.log(Math.floor(25.5)) // 25
+// console.log(Math.floor(25.1)) // 25
+
+// var num = Math.floor(Math.random() * 10 + 1)
+// console.log(num)
+var num = Math.floor(Math.random() * 9 + 2)
+console.log(num)
