@@ -816,3 +816,14 @@
 
 // 'use strict'
 // eval = "hi"  // causes error
+
+// var color = 'red'
+// function sayColor () {
+//   console.log(window.color)
+// }
+// window.sayColor() // red
+
+var global = (function () {
+  return this
+}())
+console.log(global)
