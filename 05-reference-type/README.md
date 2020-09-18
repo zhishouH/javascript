@@ -1347,17 +1347,16 @@
     ```
   - (2) Math对象
     - <1> Math对象的属性
-
-    |序号|属性|说明|
-    |:--|:--|:--|
-    |1|Math.E|自然对数的底数，即常量e的值|
-    |2|Math.LN10|10的自然对数|
-    |3|Math.LN2|2的自然对数|
-    |4|Math.LOG2E|以2为底e的对数|
-    |5|Math.LOG10E|以10为底e的对数|
-    |6|Math.PI|Π的值|
-    |7|Math.SQRT1_2|1/2的平方根(即2的平方根的倒数)|
-    |8|Math.SQRT2|2的平方根|
+      |序号|属性|说明|
+      |:--|:--|:--|
+      |1|Math.E|自然对数的底数，即常量e的值|
+      |2|Math.LN10|10的自然对数|
+      |3|Math.LN2|2的自然对数|
+      |4|Math.LOG2E|以2为底e的对数|
+      |5|Math.LOG10E|以10为底e的对数|
+      |6|Math.PI|Π的值|
+      |7|Math.SQRT1_2|1/2的平方根(即2的平方根的倒数)|
+      |8|Math.SQRT2|2的平方根|
 
     - <2> min()和max()方法
     ```
@@ -1392,12 +1391,58 @@
     ```
     - <4> random()方法
       - 返回大于等于0小于1的一个随机数
-      ```
-      返回一个1到10之间的数值
-      var num = Math.floor(Math.random() * 10 + 1)
-      ```
-      ```
-      返回一个介于2到10之间的数值
-      var num = Math.floor(Math.random() * 9 + 2)
-      ```
-      
+    ```
+    利用Math.random()从某个整数范围内随机选择一个值：
+    值 = Math.floor(Math.random() * 可能值的总数 + 第一个可能的值)
+    ```
+    ```
+    返回一个1到10之间的数值
+    var num = Math.floor(Math.random() * 10 + 1)
+    ```
+    ```
+    返回一个介于2到10之间的数值
+    var num = Math.floor(Math.random() * 9 + 2)
+    ```
+    ```
+    通过一个函数来计算可能值的总数和第一个可能的值：
+    function selectFrom (lowerValue, UpperValue) {
+    var choices = UpperValue - lowerValue + 1
+    return Math.floor(Math.random() * choices + lowerValue)
+    }
+    var num = selectFrom(2, 10)
+    console.log(num) // 介于2和10之间(包括2和10)的一个数值
+    ```
+    ```
+    利用selectForm()这个函数，可以方便地从数组中随机取出一项
+    var colors = ['red', 'green', 'blue', 'yellow', 'black', 'purple', 'brown']
+    var color = colors[selectFrom(0, colors.length - 1)]
+    console.log(color) // 可能是数组中包含的任何一个字符串
+    ```
+    - <5> 其他方法
+      |序号|方法|说明|
+      |:--|:--|:--|
+      |1|Math.abs(num)|返回num的绝对值|
+      |2|Math.exp(num)|返回Math.E的num次幂|
+      |3|Math.log(num)|返回num的自然对数|
+      |4|Math.pow(num,power)|返回num的power次幂|
+      |5|Math.sqrt(num)|返回num的平方根|
+      |6|Math.acos(x)|返回x的反余弦值|
+      |7|Math.asin(x)|返回x的反正弦值|
+      |8|Math.atan(x)|返回x的反正切值|
+      |9|Math.atan2(y,x)|返回y/x的反正弦值|
+      |10|Math.cos(x)|返回x的余弦值|
+      |11|Math.sin(x)|返回x的正弦值|
+      |12|Math.tan(x)|返回x的正切值|
+
+- (8) 小结
+  - <1>对象在JavaScript中被称为引用类型的值，而且有一些内置的引用类型可以用来创建特定的对象
+    - 引用类型与传统面向对象程序设计的类相似，但实现不同
+    - Object是一个基础类型，其他所有类型都从Object继承了基本的行为
+    - Array类型是一组值得有序列表，同时还提供了操作和转换这些值的功能
+    - Date类型提供了有关日期和时间的信息，包括当前日期和时间以及相关的计算功能
+    - RegExp类型是ECMAScript支持的正则表达式的一个接口，提供了最基本的和一些高级的正则表达式功能
+  - <2>函数实际上是Function类型的实例，因此函数也是对象；而这一点正是JavaScript最有特色的地方。由于函数是对象，所以函数也拥有方法，可以用来增强其行为。
+  - <3>因为有了基本包装类型，所以JavaScript中的基本类型值可以被当作对象来访问
+    - 每个包装类型都映射到同名的基本类型
+    - 在读取模式下访问基本类型值时，就会创建对应的基本包装类型的一个对象，从而方便了数据操作
+    - 操作基本类型值得语句一经执行完毕，就会立即销毁创建得包装对象
