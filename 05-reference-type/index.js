@@ -860,5 +860,17 @@
 
 // var num = Math.floor(Math.random() * 10 + 1)
 // console.log(num)
-var num = Math.floor(Math.random() * 9 + 2)
-console.log(num)
+
+// var num = Math.floor(Math.random() * 9 + 2)
+// console.log(num)
+
+function selectFrom (lowerValue, UpperValue) {
+  var choices = UpperValue - lowerValue + 1
+  return Math.floor(Math.random() * choices + lowerValue)
+}
+var num = selectFrom(2, 10)
+console.log(num) // 介于2和10之间(包括2和10)的一个数值
+
+var colors = ['red', 'green', 'blue', 'yellow', 'black', 'purple', 'brown']
+var color = colors[selectFrom(0, colors.length - 1)]
+console.log(color) // 可能是数组中包含的任何一个字符串
