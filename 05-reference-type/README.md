@@ -177,7 +177,7 @@
       console.log(count)  // 2
 
       count = colors.push('black')  // 推入一项到数组末尾
-      console.log(count)  // 2
+      console.log(count)  // 3
 
       var item = colors.shift()  // 取得第一项
       console.log(item)  // red
