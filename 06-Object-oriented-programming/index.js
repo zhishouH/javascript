@@ -171,7 +171,7 @@ console.log(person7)
 console.log(person8)
 // {name: "pepsi", age: 20, job: "Doctor", sayName: ƒ}
 
-// 2.2构造函数
+// 2.2构造函数模式
 function Person (name, age, job) {
   this.name = name
   this.age = age
@@ -202,3 +202,28 @@ console.log(ps2 instanceof Object)
 // true
 console.log(ps2 instanceof Person)
 // true
+
+// 2.2.1 将构造函数当作函数
+function Person2 (name, age, job) {
+  this.name = name
+  this.age = age
+  this.job = job
+  this.sayName = function () {
+    return (this.name)
+  }
+}
+// 当作构造函数使用
+var ps3 = new Person2('zhishouh', 19, 'student')
+console.log(ps3.sayName())
+// "zhishouh"
+
+// 作为普通函数使用
+Person2('pepsi', 20, 'Doctor')
+console.log(window.sayName())
+// "pepsi"
+
+// 在另一个对象中的作用域中调用
+var o = new Object()
+Person2.call(o, 'shabi', 25, 'notWork')
+console.log(o.sayName())
+// shabi
