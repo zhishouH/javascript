@@ -227,3 +227,11 @@ var o = new Object()
 Person2.call(o, 'shabi', 25, 'notWork')
 console.log(o.sayName())
 // shabi
+
+// 构造函数的问题
+function Person3 (name, age, job) {
+  this.name = name
+  this.job = job
+  this.age = age
+  this.sayName = new Function('alert(this.name)')
+}
