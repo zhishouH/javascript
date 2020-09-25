@@ -221,8 +221,10 @@
     }
     var person7 = createPerson('zhishouh', 19, 'student')
     var person8 = createPerson('pepsi', 20, 'Doctor')
+
     console.log(person7)
     // {name: "zhishouh", age: 19, job: "student", sayName: ƒ}
+
     console.log(person8)
     // {name: "pepsi", age: 20, job: "Doctor", sayName: ƒ}
     ```
@@ -238,8 +240,10 @@
     }
     var ps1 = new Person('zhishouh', 19, 'student')
     var ps2 = new Person('pepsi', 20, 'Doctor')
+
     console.log(ps1)
     <!-- Person {name: "zhishouh", age: 19, job: "student", sayName: ƒ} -->
+
     console.log(ps2)
     <!-- Person {name: "pepsi", age: 20, job: "Doctor", sayName: ƒ} -->
     ```
@@ -256,6 +260,7 @@
       ```
       console.log(ps1.constructor == Person)
       <!-- true -->
+
       console.log(ps2.constructor == Person)
       <!-- true -->
       ```
@@ -263,10 +268,13 @@
       ```
       console.log(ps1 instanceof Object)
       <!-- true -->
+
       console.log(ps1 instanceof Person)
       <!-- true -->
+
       console.log(ps2 instanceof Object)
       <!-- true -->
+
       console.log(ps2 instanceof Person)
       <!-- true -->
       ```
@@ -281,21 +289,21 @@
           return (this.name)
         }
       }
-      // 当作构造函数使用
+      <!-- 当作构造函数使用 -->
       var ps3 = new Person2('zhishouh', 19, 'student')
       console.log(ps3.sayName())
-      // "zhishouh"
+      <!-- "zhishouh" -->
 
-      // 作为普通函数使用
+      <!-- 作为普通函数使用 -->
       Person2('pepsi', 20, 'Doctor')
       console.log(window.sayName())
-      // "pepsi"
+      <!-- "pepsi" -->
 
-      // 在另一个对象中的作用域中调用
+      <!-- 在另一个对象中的作用域中调用 -->
       var o = new Object()
       Person2.call(o, 'shabi', 25, 'notWork')
       console.log(o.sayName())
-      // shabi
+      <!-- shabi -->
       ```
     
     - [2] 构造函数的问题 
@@ -321,16 +329,41 @@
       }
       var personDemo1 = new Person4('zhishouh', 19, 'student')
       var personDemo2 = new Person4('pepsi', 20, 'shabi')
+
       console.log(personDemo1)
       <!-- Person4 {name: "zhishouh", age: 19, job: "student", sayName: ƒ} -->
+
       console.log(personDemo2)
       <!-- Person4 {name: "pepsi", age: 20, job: "shabi", sayName: ƒ} -->
+
       console.log(personDemo1.sayName())
       <!-- zhishouh -->
+
       console.log(personDemo2.sayName())
       <!-- pepsi -->
       ```
   - <3> 原型模式
+    ```
+    function NewPerson () {
+
+    }
+    NewPerson.prototype.name = 'zhishouh'
+    NewPerson.prototype.age = 19
+    NewPerson.prototype.job = 'student'
+    NewPerson.prototype.sayName = function () {
+      return this.name
+    }
+    var newPerson1 = new NewPerson()
+    console.log(newPerson1.sayName())
+    <!-- zhishouh -->
+
+    var newPerson2 = new NewPerson()
+    console.log(newPerson2.sayName())
+    <!-- zhishouh -->
+    
+    console.log(newPerson1.sayName == newPerson2.sayName)
+    <!-- true -->
+    ```
   - <4> 组合使用构造函数模式和原型模式
   - <5> 动态原型模式
   - <6> 寄生构造函数模式
