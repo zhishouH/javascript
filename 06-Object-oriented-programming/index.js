@@ -229,13 +229,13 @@ console.log(o.sayName())
 // shabi
 
 // 构造函数的问题
-// function Person3 (name, age, job) {
-//   this.name = name
-//   this.job = job
-//   this.age = age
-//   this.sayName = new Function('alert(this.name)')
-// }
-// console.log(ps1.sayName == ps2.sayName)
+function Person3 (name, age, job) {
+  this.name = name
+  this.job = job
+  this.age = age
+  this.sayName = new Function('alert(this.name)')
+}
+console.log(ps1.sayName == ps2.sayName)
 // false
 
 function Person4 (name, age, job) {
@@ -257,3 +257,22 @@ console.log(personDemo1.sayName())
 // zhishouh
 console.log(personDemo2.sayName())
 // pepsi
+
+// 原型模式
+function NewPerson () {
+
+}
+NewPerson.prototype.name = 'zhishouh'
+NewPerson.prototype.age = 19
+NewPerson.prototype.job = 'student'
+NewPerson.prototype.sayName = function () {
+  return this.name
+}
+var newPerson1 = new NewPerson()
+console.log(newPerson1.sayName())
+// zhishouh
+var newPerson2 = new NewPerson()
+console.log(newPerson2.sayName())
+// zhishouh
+console.log(newPerson1.sayName == newPerson2.sayName)
+// true
