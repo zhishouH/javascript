@@ -229,9 +229,31 @@ console.log(o.sayName())
 // shabi
 
 // 构造函数的问题
-function Person3 (name, age, job) {
+// function Person3 (name, age, job) {
+//   this.name = name
+//   this.job = job
+//   this.age = age
+//   this.sayName = new Function('alert(this.name)')
+// }
+// console.log(ps1.sayName == ps2.sayName)
+// false
+
+function Person4 (name, age, job) {
   this.name = name
-  this.job = job
   this.age = age
-  this.sayName = new Function('alert(this.name)')
+  this.job = job
+  this.sayName = sayName
 }
+function sayName () {
+  console.log(this.name)
+}
+var personDemo1 = new Person4('zhishouh', 19, 'student')
+var personDemo2 = new Person4('pepsi', 20, 'shabi')
+console.log(personDemo1)
+// Person4 {name: "zhishouh", age: 19, job: "student", sayName: ƒ}
+console.log(personDemo2)
+// Person4 {name: "pepsi", age: 20, job: "shabi", sayName: ƒ}
+console.log(personDemo1.sayName())
+// zhishouh
+console.log(personDemo2.sayName())
+// pepsi
