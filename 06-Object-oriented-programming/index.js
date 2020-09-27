@@ -276,3 +276,5 @@ console.log(newPerson2.sayName())
 // zhishouh
 console.log(newPerson1.sayName == newPerson2.sayName)
 // true
+
+console.log(NewPerson.prototype.isPrototypeOf(newPerson1))
